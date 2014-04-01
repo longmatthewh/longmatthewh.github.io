@@ -4,69 +4,100 @@
         <meta charset="utf-8">
         <title>a11yTree jQuery tree plugin</title>
         <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
-        <link href="/font-awesome/css/font-awesome.min.css" rel="stylesheet">
-        <link href="/css/a11yTree.css" rel="stylesheet">
+        <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/a11yTree.min.css" rel="stylesheet">
     </head>
     <body>
-    <article>
         <header>
-            <h1>Demo Page for <em>jquery.a11yTree</em></h1>
-            Here's the demo page for the jquery.a11yTree jQuery plugin.
+            <h1>jquery.a11yTree</h1>
+            <p>A very lightweight, accessible, and uninvasive jQuery plugin that transforms nested lists into an expanding and collapsing tree.</p>
         </header>
-        <section id="all-defaults">
-            <h2>Guitars:</h2>
-            <ul>
-                <li>
-                    Electric
-                    <ul>
-                        <li>
-                            Fender
-                            <ul>
-                                <li>Stratocaster</li>
-                                <li>Telecaster</li>
-                            </ul>
-                        </li>
-                        <li>Gibson</li>
-                    </ul>
-                </li>
-                <li>Acoustic</li>
-            </ul>
-        </section>
-        <section id="custom-toggle">
-            <h2>Guitars:</h2>
-            <ul>
-                <li>
-                    Electric
-                    <ul>
-                        <li>
-                            Fender
-                            <ul>
-                                <li>Stratocaster</li>
-                                <li>Telecaster</li>
-                            </ul>
-                        </li>
-                        <li>Gibson</li>
-                    </ul>
-                </li>
-                <li>Acoustic</li>
-            </ul>
-        </section>
-    </article>
-    <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="/js/jquery.a11yTree.min.js"></script>
-    <script>
-        $('#all-defaults > ul').a11yTree();
-        $('#custom-toggle > ul').a11yTree({
-                customToggle : {
-                    html:'<i class="fa fa-plus-square-o"></i>',
-                    onCollapseCallback: function($toggle) {
-                        $toggle.children('div').find('.fa-minus-square-o').removeClass('fa-minus-square-o').addClass('fa-plus-square-o');
-                    },
-                    onExpandCallback: function($toggle) {
-                        $toggle.children('div').find('.fa-plus-square-o').removeClass('fa-plus-square-o').addClass('fa-minus-square-o');
+        <main>
+            <section>
+                    <h2><i class="fa fa-lightbulb-o"></i> The Idea</h2>
+                    Adding functionality to expand and collapse tree nodes and their nested children is fairly trivial. Unfortunately, many implementations don't include the functionality people using assistive technologies depend on, or are just more complex than what's needed.
+                <h3>Inspirations</h3>
+                <dl>
+                    <dt><a href="http://code.google.com/p/dynatree/">DynaTree</a> and <a href="https://github.com/mar10/fancytree/">Fancytree</a> jQuery plugins</dt>
+                    <dd>They're great&mdash;I just wanted something simpler, and less invasive to the the original DOM.</dd>
+                    <dt><a href="http://accessibleculture.org/articles/2013/02/not-so-simple-aria-tree-views-and-screen-readers/">(Not so) Simple ARIA Tree Views and Screen Readers</a></dt>
+                    <dd>This is a great article that breaks down all of the ARIA roles and the additional semantics ARIA provides to a document.</dd>
+                </dl>
+            </section>
+            <section>
+                <h2><i class="fa fa-compass"></i> Navigation</h2>
+                a11yTree provides mouse navigation via the expand <i class="fa fa-plus-square"></i> and collapse <i class="fa fa-minus-square"></i> toggles, as well as the following tree <i class="fa fa-keyboard-o"></i> keyboard navigation:
+                <dl>
+                    <dt><i class="fa fa-caret-square-o-down"></i> down</dt>
+                    <dd>navigates down to the next expanded tree node</dd>
+                    <dt><i class="fa fa-caret-square-o-up"></i> up</dt>
+                    <dd>navigates up to the previous expanded tree node</dd>
+                    <dt><i class="fa fa-caret-square-o-right"></i> right</dt>
+                    <dd>expands the tree node in focus if it's collapsed and has children, or navigates to the first child node of an expanded parent</dd>
+                    <dt><i class="fa fa-caret-square-o-left"></i> left</dt>
+                    <dd>collapses the tree node in focus if it's expanded, or navigates to the parent node</dd>
+                </dl>
+            </section>
+            <section>
+                <h2><i class="fa fa-code"></i> How it Works</h2>
+                Include a list of nested lists in your DOM that you wish to turn into a tree or an existing tree that you'd like to add additional ARIA semantics to and keyboard navigation.
+                <ul class="code-example">
+                    <li>parent 1</li>
+                    <li>
+                        parent 2
+                        <ul>
+                            <li>child 1</li>
+                            <li>
+                                child 2
+                                <ul>
+                                    <li>grandchild 1</li>
+                                    <li>grandchild 2</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+                Now apply a11yTree to the parent list element.
+                <div class="code-example">
+                    $('ul.code-example').a11yTree();
+                </div>
+                And you get this:
+                <ul class="code-example-real">
+                    <li>parent 1</li>
+                    <li>
+                        parent 2
+                        <ul>
+                            <li>child 1</li>
+                            <li>
+                                child 2
+                                <ul>
+                                    <li>grandchild 1</li>
+                                    <li>grandchild 2</li>
+                                </ul>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </section>
+            <section>
+                <h2><i class="fa fa-cogs"></i> Configuration Options</h2>
+            </section>
+
+        </main>
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="../js/jquery.a11yTree.min.js"></script>
+        <script>
+            $('.code-example-real').a11yTree({
+                    customToggle : {
+                        html:'<i class="fa fa-plus-square"></i>',
+                        onCollapseCallback: function($toggle) {
+                            $toggle.children('div').find('.fa-minus-square').removeClass('fa-minus-square').addClass('fa-plus-square');
+                        },
+                        onExpandCallback: function($toggle) {
+                            $toggle.children('div').find('.fa-plus-square').removeClass('fa-plus-square').addClass('fa-minus-square');
+                        }
                     }
-                }
-        });
-    </script>
+            });
+        </script>
     </body>
 </html>
