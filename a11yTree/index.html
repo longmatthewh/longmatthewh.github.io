@@ -2,7 +2,9 @@
 <html lang="en-US">
     <head>
         <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>a11yTree jQuery tree plugin</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
         <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/a11yTree.min.css" rel="stylesheet">
@@ -41,29 +43,57 @@
             <section>
                 <h2><i class="fa fa-code"></i> How it Works</h2>
                 Include a list of nested lists in your DOM that you wish to turn into a tree or an existing tree that you'd like to add additional ARIA semantics to and keyboard navigation.
-                <ul class="code-example">
-                    <li>parent 1</li>
-                    <li>
-                        parent 2
-                        <ul>
-                            <li>child 1</li>
-                            <li>
-                                child 2
-                                <ul>
-                                    <li>grandchild 1</li>
-                                    <li>grandchild 2</li>
-                                </ul>
-                            </li>
-                        </ul>
-                    </li>
-                </ul>
-                Now apply a11yTree to the parent list element.
+                <div class="code-example">
+                    <ul>
+                        <li>
+                            parent 1
+                            <ul>
+                                <li>child 1
+                                    <ul>
+                                        <li>grandchild 1</li>
+                                        <li>grandchild 2</li>
+                                    </ul>
+                                </li>
+                                <li>
+                                    child 2
+                                </li>
+                            </ul>
+                        </li>
+                        <li>
+                            parent 2
+                            <ul>
+                                <li>child 1</li>
+                                <li>
+                                    child 2
+                                    <ul>
+                                        <li>grandchild 1</li>
+                                        <li>grandchild 2</li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                Now apply a11yTree with minimal options to the parent list element.
                 <div class="code-example">
                     $('ul.code-example').a11yTree();
                 </div>
                 And you get this:
                 <ul class="code-example-real">
-                    <li>parent 1</li>
+                    <li>
+                        parent 1
+                        <ul>
+                            <li>child 1
+                                <ul>
+                                    <li>grandchild 1</li>
+                                    <li>grandchild 2</li>
+                                </ul>
+                            </li>
+                            <li>
+                                child 2
+                            </li>
+                        </ul>
+                    </li>
                     <li>
                         parent 2
                         <ul>

@@ -3,6 +3,18 @@ body, header, h1, h2, h3, p, dl, dt, dd, pre, code {
     padding: 0;
 }
 
+ul {
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+a {
+    color: #0000FF;
+}
+
+a:focus {
+    background-color:#fff;
+}
 
 body {
     font-family:"PT Sans";
@@ -14,7 +26,7 @@ body > header {
     background-color: #9ACD32;
     color: #FFFFFF;
     opacity: 0.95;
-    padding: 5px 20px 20px;
+    padding: 10px 120px 30px;
     position: relative;
 }
 
@@ -37,14 +49,14 @@ h1 {
 }
 
 h2 {
-    font-size: 30px;
+    font-size: 36px;
     font-weight: normal;
     margin-left:-20px;
     margin-right:-20px;
     padding: 0 20px;
-}
-
-h2 {
+    color:#466A00;
+    background: #FFFFFF;
+    border-radius: 10px;
     margin-top:10px;
     margin-bottom:5px;
 }
@@ -58,7 +70,7 @@ dt {
 }
 
 section {
-    padding: 2px 20px;
+    padding: 2px 120px;
     margin-bottom: 10px;
 }
 
@@ -78,8 +90,8 @@ section p {
     font-size: 16px;
     line-height: 18px;
     max-width: 500px;
-    padding-bottom: 10px;
-    padding-top: 10px;
+    padding:10px 10px;
+    margin-bottom: 10px;
 }
 
 ul[role="tree"] li {
@@ -97,10 +109,13 @@ ul[role="tree"] li {
     width: 8px;
 }
 
+.custom-toggle, .fa-plus-square, .fa-minus-square {
+    color:#466A00;
+}
+
 .custom-toggle {
     float: left;
     margin-right: 4px;
-    color:#20B2AA;
 }
 
 .default-toggle {
@@ -113,6 +128,10 @@ ul[role="tree"] li {
     position: absolute;
     text-align: center;
     line-height: 8px;
+}
+
+.has-children {
+    margin-left: -19px;
 }
 
 li[aria-expanded="false"] > .default-toggle:after {
@@ -134,4 +153,42 @@ li[aria-expanded="false"] > ul {
 
 li[aria-expanded="true"] > ul {
     display:block;
+}
+
+@media ( max-width : 1025px) {
+    body > header, section {
+        padding-left:80px;
+        padding-right:80px;
+    }
+
+
+}
+
+@media ( max-width : 769px) {
+    body > header, section {
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    main > section:first-child h2 {
+        margin-top:0;
+    }
+
+    section {
+        padding-top:0;
+    }
+}
+
+@media ( max-width : 385px) {
+    h1 {
+        font-size: 39px;
+    }
+
+    header > p {
+        font-size:20px;
+    }
+
+    h2 {
+        font-size: 30px;
+    }
 }
