@@ -23,7 +23,7 @@ body {
 }
 
 body > header {
-    background-color: #9ACD32;
+    background-color: #7EB116;
     color: #FFFFFF;
     opacity: 0.95;
     padding: 10px 120px 30px;
@@ -53,7 +53,7 @@ h2 {
     font-weight: normal;
     margin-left:-20px;
     margin-right:-20px;
-    padding: 0 20px;
+    padding: 4px 20px;
     color:#466A00;
     background: #FFFFFF;
     border-radius: 10px;
@@ -160,8 +160,6 @@ li[aria-expanded="true"] > ul {
         padding-left:80px;
         padding-right:80px;
     }
-
-
 }
 
 @media ( max-width : 769px) {
@@ -177,6 +175,10 @@ li[aria-expanded="true"] > ul {
     section {
         padding-top:0;
     }
+
+    h2 {
+        border-radius:0;
+    }
 }
 
 @media ( max-width : 385px) {
@@ -186,9 +188,10 @@ li[aria-expanded="true"] > ul {
 
     header > p {
         font-size:20px;
+        line-height: 21px;
     }
 
     h2 {
-        font-size: 30px;
+        font-size: 32px;
     }
 }
