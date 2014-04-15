@@ -3,19 +3,6 @@ body, header, h1, h2, h3, p, dl, dt, dd, pre, code {
     padding: 0;
 }
 
-ul {
-    margin-top:0;
-    margin-bottom: 0;
-}
-
-a {
-    color: #0000FF;
-}
-
-a:focus {
-    background-color:#fff;
-}
-
 body {
     font-family:"PT Sans";
     font-size: 17px;
@@ -37,11 +24,23 @@ body > header:before {
     content: "";
     display: block;
     left: 0;
-    opacity: 0.25;
+    opacity: 0.15;
     position: absolute;
     right: 0;
     top: 0;
     z-index: -1;
+}
+
+a {
+    color: #0000FF;
+}
+
+a:focus {
+    background-color:#fff;
+}
+
+li:focus {
+    outline: none;
 }
 
 h1 {
@@ -65,13 +64,28 @@ h3 {
     margin-top: 10px;
 }
 
+ul {
+    margin-top:0;
+    margin-bottom: 0;
+}
+
 dt {
     margin-top:7px;
+}
+
+code {
+    background:#efefef;
+    padding: 3px;
+    border-radius: 4px;
 }
 
 section {
     padding: 2px 120px;
     margin-bottom: 10px;
+}
+
+#config-options section {
+    padding:0;
 }
 
 header > p {
@@ -94,57 +108,81 @@ section p {
     margin-bottom: 10px;
 }
 
+#code-example-real {
+    margin-top: 5px;
+}
+
 ul[role="tree"] li {
     list-style-type: none;
 }
 
-#custom-toggle > ul {
-    padding:0;
-    margin:0;
-    margin-left:10px;
+#options-default .at-toggle {
+    margin-right:5px;
 }
 
-.default-toggle, .default-toggle:after {
-    height: 8px;
-    width: 8px;
+#options-default .at-toggle, #options-default .at-toggle:after {
+    height: 10px;
+    width: 10px;
 }
 
-.custom-toggle, .fa-plus-square, .fa-minus-square {
-    color:#466A00;
-}
-
-.custom-toggle {
-    float: left;
-    margin-right: 4px;
-}
-
-.default-toggle {
+#options-default .at-toggle {
     border: 1px solid #999999;
     display: inline-block;
     cursor: pointer;
 }
 
-.default-toggle:after {
+#options-default .at-toggle:after {
     position: absolute;
     text-align: center;
-    line-height: 8px;
+    line-height: 10px;
 }
 
-.has-children {
-    margin-left: -19px;
-}
-
-li[aria-expanded="false"] > .default-toggle:after {
+#options-default li[aria-expanded="false"] > .at-toggle:after {
     content: "+";
 }
 
-li[aria-expanded="true"] > .default-toggle:after {
+#options-default li[aria-expanded="true"] > .at-toggle:after {
     content: "-";
 }
 
-li:focus {
+.font-awesome-tree > ul {
+    padding:0;
+    margin:0;
+    margin-left:25px;
+}
+
+.font-awesome-tree .at-toggle, .fa-plus-square, .fa-minus-square {
+    color:#466A00;
+}
+
+.font-awesome-tree .at-toggle {
+    float: left;
+    margin-right: 4px;
+}
+
+.at-has-children {
+    margin-left: -11px;
+}
+
+.font-awesome-tree .at-has-children {
+    margin-left: -20px;
+}
+
+.font-awesome-tree li {
+    padding-left:10px;
+    border-left: dotted 1px transparent;
+    margin-left:-1px;
+}
+
+.font-awesome-tree li:focus {
     border:none;
     outline:none;
+    color:#466A00;
+    border-left:dotted 1px #333;
+}
+
+.font-awesome-tree li:focus ul {
+    color:#000;
 }
 
 li[aria-expanded="false"] > ul {
@@ -186,12 +224,12 @@ li[aria-expanded="true"] > ul {
         font-size: 39px;
     }
 
+    h2 {
+        font-size: 32px;
+    }
+
     header > p {
         font-size:20px;
         line-height: 21px;
-    }
-
-    h2 {
-        font-size: 32px;
     }
 }
