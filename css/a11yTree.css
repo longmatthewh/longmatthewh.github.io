@@ -39,7 +39,7 @@ a:focus {
     background-color:#fff;
 }
 
-li:focus {
+li[aria-selected="true"]  {
     outline: none;
 }
 
@@ -146,9 +146,8 @@ ul[role="tree"] li {
 }
 
 .font-awesome-tree > ul {
-    padding:0;
+    padding:10px 0 10px 30px;
     margin:0;
-    margin-left:25px;
 }
 
 .font-awesome-tree .at-toggle, .fa-plus-square, .fa-minus-square {
@@ -174,16 +173,18 @@ ul[role="tree"] li {
     margin-left:-1px;
 }
 
-.font-awesome-tree li:focus {
+
+.font-awesome-tree li[aria-selected="true"]  ul {
+    color:#000;
+}
+
+.font-awesome-tree li[aria-selected="true"] {
     border:none;
     outline:none;
     color:#466A00;
-    border-left:dotted 1px #333;
+    border-left:solid 1px #466A00;
 }
 
-.font-awesome-tree li:focus ul {
-    color:#000;
-}
 
 li[aria-expanded="false"] > ul {
     display:none;
