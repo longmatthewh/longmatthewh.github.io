@@ -26,8 +26,8 @@
       <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="1965">
-              <caret line="49" column="77" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
+            <state vertical-scroll-proportion="-21.25" vertical-offset="1140" max-vertical-offset="1935">
+              <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -46,18 +46,8 @@
       <file leaf-file-name="Gruntfile.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/Gruntfile.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-              <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="a11yTree.less" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="14.266666" vertical-offset="2975" max-vertical-offset="3600">
-              <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+              <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -66,8 +56,18 @@
       <file leaf-file-name="a11yTree.min.css" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/a11yTree.min.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="661">
-              <caret line="0" column="663" selection-start-line="0" selection-start-column="663" selection-end-line="0" selection-end-column="663" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="687">
+              <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="a11yTree.less" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-20.2" vertical-offset="0" max-vertical-offset="3150">
+              <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
               <folding />
             </state>
           </provider>
@@ -105,11 +105,12 @@
       <list>
         <option value="$PROJECT_DIR$/index.html" />
         <option value="$PROJECT_DIR$/package.json" />
-        <option value="$PROJECT_DIR$/a11yTree/index.html" />
         <option value="$PROJECT_DIR$/css/a11yTree.css" />
-        <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/css/mixins.less" />
+        <option value="$PROJECT_DIR$/a11yTree/index.html" />
         <option value="$PROJECT_DIR$/css/a11yTree.less" />
+        <option value="$PROJECT_DIR$/Gruntfile.js" />
+        <option value="$PROJECT_DIR$/css/a11yTree.min.css" />
       </list>
     </option>
   </component>
@@ -264,6 +265,8 @@
       <recent name="$PROJECT_DIR$/a11yTree" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/node_modules" />
+      <recent name="$PROJECT_DIR$/node_modules/grunt-contrib-less/node_modules" />
       <recent name="$PROJECT_DIR$/css" />
     </key>
   </component>
@@ -483,14 +486,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="450">
-          <caret line="18" column="0" selection-start-line="18" selection-start-column="0" selection-end-line="18" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/mixins.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.0612245" vertical-offset="0" max-vertical-offset="300">
@@ -501,24 +496,32 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-30.625" vertical-offset="0" max-vertical-offset="1965">
-          <caret line="49" column="77" selection-start-line="49" selection-start-column="77" selection-end-line="49" selection-end-column="77" />
+        <state vertical-scroll-proportion="-21.25" vertical-offset="1140" max-vertical-offset="1935">
+          <caret line="110" column="0" selection-start-line="110" selection-start-column="0" selection-end-line="110" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="14.266666" vertical-offset="2975" max-vertical-offset="3600">
-          <caret line="127" column="26" selection-start-line="127" selection-start-column="26" selection-end-line="127" selection-end-column="26" />
+        <state vertical-scroll-proportion="-20.2" vertical-offset="0" max-vertical-offset="3150">
+          <caret line="101" column="23" selection-start-line="101" selection-start-column="23" selection-end-line="101" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Gruntfile.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="360">
+          <caret line="2" column="0" selection-start-line="2" selection-start-column="0" selection-end-line="2" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/css/a11yTree.min.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="90">
-          <caret line="0" column="663" selection-start-line="0" selection-start-column="663" selection-end-line="0" selection-end-column="663" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="687">
+          <caret line="0" column="31" selection-start-line="0" selection-start-column="31" selection-end-line="0" selection-end-column="31" />
           <folding />
         </state>
       </provider>

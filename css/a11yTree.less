@@ -37,7 +37,8 @@ a {
     color: #0000ff;
 }
 
-a:focus {
+a:focus, a:hover {
+    outline:#0000ff dotted 1px;
     background-color:#fff;
 }
 
@@ -98,7 +99,7 @@ section p {
 
 .code-example {
     margin-top:10px;
-    background: #EFEFEF;
+    background: #efefef;
     font-family: courier;
     font-size: 16px;
     line-height: 18px;
@@ -113,35 +114,6 @@ section p {
 
 ul[role="tree"] li {
     list-style-type: none;
-}
-
-#options-default .at-toggle {
-    margin-right:5px;
-}
-
-#options-default .at-toggle, #options-default .at-toggle:after {
-    height: 10px;
-    width: 10px;
-}
-
-#options-default .at-toggle {
-    border: 1px solid #999;
-    display: inline-block;
-    cursor: pointer;
-}
-
-#options-default .at-toggle:after {
-    position: absolute;
-    text-align: center;
-    line-height: 10px;
-}
-
-#options-default li[aria-expanded="false"] > .at-toggle:after {
-    content: "+";
-}
-
-#options-default li[aria-expanded="true"] > .at-toggle:after {
-    content: "-";
 }
 
 .font-awesome-tree > ul {
@@ -172,7 +144,6 @@ ul[role="tree"] li {
     margin-left:-1px;
 }
 
-
 .font-awesome-tree li[aria-selected="true"]  ul {
     color:#000;
 }
@@ -183,7 +154,6 @@ ul[role="tree"] li {
     color:#466A00;
     border-left:solid 1px #466A00;
 }
-
 
 li[aria-expanded="false"] > ul {
     display:none;

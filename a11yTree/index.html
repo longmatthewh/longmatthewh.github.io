@@ -108,7 +108,6 @@
         <script src="../js/jquery.a11yTree.min.js"></script>
         <script>
             $('#simple-list-example > ul').clone().appendTo('#code-example-real');
-            $('#simple-list-example > ul').clone().appendTo('#options-default');
             $('#code-example-real > ul').a11yTree({
                 customToggle : {
                     html:'<i class="fa fa-plus-square"></i>',
@@ -120,7 +119,6 @@
                     $toggle.children('.at-toggle').find('.fa-plus-square').removeClass('fa-plus-square').addClass('fa-minus-square');
                 }
             });
-            $('#options-default > ul').a11yTree();
         </script>
     </body>
 </html>
