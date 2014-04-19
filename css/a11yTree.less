@@ -1,0 +1,235 @@
+@import url(mixins.less);
+
+body, header, h1, h2, h3, p, dl, dt, dd, pre, code {
+    margin:0;
+    padding: 0;
+}
+
+body {
+    font-family:"PT Sans";
+    font-size: 17px;
+    background-image: url('../img/ps_neutral.png');
+}
+
+body > header {
+    background-color: #7eb116;
+    color: #fff;
+    .opacity(.95);
+    padding: 10px 120px 30px;
+    position: relative;
+}
+
+body > header:before {
+    background: url("../img/park.jpg") no-repeat center center;
+    background-size:cover;
+    bottom: 0;
+    content: "";
+    display: block;
+    left: 0;
+    .opacity(.15);
+    position: absolute;
+    right: 0;
+    top: 0;
+    z-index: -1;
+}
+
+a {
+    color: #0000ff;
+}
+
+a:focus {
+    background-color:#fff;
+}
+
+li[aria-selected="true"]  {
+    outline: none;
+}
+
+h1 {
+    font-size: 60px;
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: normal;
+    margin:10px -20px 5px -20px;
+    padding: 4px 20px;
+    color:#466A00;
+    background: #fff;
+    .border-radius(10px);
+}
+
+h3 {
+    margin-top: 10px;
+}
+
+ul {
+    margin-top:0;
+    margin-bottom: 0;
+}
+
+dt {
+    margin-top:7px;
+}
+
+code {
+    background:#efefef;
+    padding: 3px;
+    .border-radius(4px);
+}
+
+section {
+    padding: 2px 120px;
+    margin-bottom: 10px;
+}
+
+#config-options section {
+    padding:0;
+}
+
+header > p {
+    font-size:24px;
+    line-height:24px;
+}
+
+section p {
+    padding: 10px 20px;
+}
+
+.code-example {
+    margin-top:10px;
+    background: #EFEFEF;
+    font-family: courier;
+    font-size: 16px;
+    line-height: 18px;
+    max-width: 500px;
+    padding:10px 10px;
+    margin-bottom: 10px;
+}
+
+#code-example-real {
+    margin-top: 5px;
+}
+
+ul[role="tree"] li {
+    list-style-type: none;
+}
+
+#options-default .at-toggle {
+    margin-right:5px;
+}
+
+#options-default .at-toggle, #options-default .at-toggle:after {
+    height: 10px;
+    width: 10px;
+}
+
+#options-default .at-toggle {
+    border: 1px solid #999;
+    display: inline-block;
+    cursor: pointer;
+}
+
+#options-default .at-toggle:after {
+    position: absolute;
+    text-align: center;
+    line-height: 10px;
+}
+
+#options-default li[aria-expanded="false"] > .at-toggle:after {
+    content: "+";
+}
+
+#options-default li[aria-expanded="true"] > .at-toggle:after {
+    content: "-";
+}
+
+.font-awesome-tree > ul {
+    padding:10px 0 10px 30px;
+    margin:0;
+}
+
+.font-awesome-tree .at-toggle, .fa-plus-square, .fa-minus-square {
+    color:#466A00;
+}
+
+.font-awesome-tree .at-toggle {
+    float: left;
+    margin-right: 4px;
+}
+
+.at-has-children {
+    margin-left: -11px;
+}
+
+.font-awesome-tree .at-has-children {
+    margin-left: -20px;
+}
+
+.font-awesome-tree li {
+    padding-left:10px;
+    border-left: dotted 1px transparent;
+    margin-left:-1px;
+}
+
+
+.font-awesome-tree li[aria-selected="true"]  ul {
+    color:#000;
+}
+
+.font-awesome-tree li[aria-selected="true"] {
+    border:none;
+    outline:none;
+    color:#466A00;
+    border-left:solid 1px #466A00;
+}
+
+
+li[aria-expanded="false"] > ul {
+    display:none;
+}
+
+li[aria-expanded="true"] > ul {
+    display:block;
+}
+
+@media ( max-width : 1025px) {
+    body > header, section {
+        padding-left:80px;
+        padding-right:80px;
+    }
+}
+
+@media ( max-width : 769px) {
+    body > header, section {
+        padding-left:20px;
+        padding-right:20px;
+    }
+
+    main > section:first-child h2 {
+        margin-top:0;
+    }
+
+    section {
+        padding-top:0;
+    }
+
+    h2 {
+      .border-radius(0);
+    }
+}
+
+@media ( max-width : 385px) {
+    h1 {
+        font-size: 39px;
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    header > p {
+        font-size:20px;
+        line-height: 21px;
+    }
+}
