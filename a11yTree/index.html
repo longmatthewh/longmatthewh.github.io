@@ -14,6 +14,7 @@
         <header>
             <h1>jquery.a11yTree</h1>
             <p>A very lightweight, accessible, and uninvasive jQuery plugin that transforms nested lists into an expanding and collapsing tree.</p>
+            <a href="https://github.com/longmatthewh/jquery-a11ytree"><i class="fa fa-github-square"></i> GitHub Project</a>
         </header>
         <main>
             <section>
@@ -30,8 +31,12 @@
             <section>
                 <header>
                     <h2><i class="fa fa-compass"></i> Navigation</h2>
-                    a11yTree was built with universal web accessibility in mind. So, not only does it provide the typical mouse navigation via expand <i class="fa fa-plus-square"></i> and collapse <i class="fa fa-minus-square"></i> toggles (see configuration options below), it also adds keyboard navigation via the arrow keys, and adds additional semantics to the markup via ARIA roles, attributes and states.
+                    a11yTree was built with universal web accessibility in mind. So, not only does it provide the typical mouse navigation via toggles, it also adds keyboard navigation, and adds additional semantics to the markup via ARIA roles, attributes and states.
                 </header>
+                <section>
+                    <h3>Mouse</h3>
+                    By default the only element this plugin injects in the DOM is a toggle element with class <code>.at-toggle</code>. This element is prepended to any <code>li</code> element that has a sublist and is intended to be styled as expand <i class="fa fa-plus-square"></i> and collapse <i class="fa fa-minus-square"></i> controls. Handlers listening to the click event are attached to these elements.
+                </section>
                 <section>
                     <h3>Keyboard</h3>
                     <dl id="keyboard-nav-description">
@@ -105,7 +110,7 @@
                 <h2><i class="fa fa-cogs"></i> Config Options</h2>
                 <section>
                     <h3>Defaults</h3>
-                    The example above does pass in some options to utilize <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon fonts as the toggles. When no options are specified, the toggles are full CSS you get this:
+                    The example above does pass in some options to utilize <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon fonts as the toggles. When no options are specified, the toggles can be styled with techniques like using background images or <code>:before</code> or <code>:after</code> pseudo elements.
                     <div id="options-default"></div>
                 </section>
             </section>
