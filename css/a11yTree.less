@@ -1,8 +1,10 @@
 @import url(mixins.less);
 
-body, header, h1, h2, h3, p, dl, dt, dd, pre, code {
+body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
     margin:0;
     padding: 0;
+    font-weight:normal;
+
 }
 
 body {
@@ -12,10 +14,10 @@ body {
 }
 
 body > header {
-    background-color: #7eb116;
+    background-color: #4D8DF6;
     color: #fff;
     .opacity(.95);
-    padding: 10px 120px 30px;
+    padding: 10px 120px 0;
     position: relative;
 }
 
@@ -31,10 +33,6 @@ body > header:before {
     right: 0;
     top: 0;
     z-index: -1;
-}
-
-li:focus {
-  color:red;
 }
 
 a {
@@ -57,16 +55,34 @@ h1 {
 
 h2 {
     font-size: 36px;
-    font-weight: normal;
-    margin:10px -20px 5px -20px;
-    padding: 4px 20px;
-    color:#466A00;
-    background: #fff;
-    .border-radius(10px);
+    font-style:"PT Sans Narrow";
+    margin-bottom:5px;
+    padding: 2px 10px;
+    color:#5B6E8C;
+    background-color: rgba(45,97,182,.20);
+    font-weight:bold;
+    .border-radiuses(0, 5px, 5px, 0);
 }
 
 h3 {
     margin-top: 10px;
+}
+
+a.proj-repo-link {
+  background:#5B6E8C;
+  color:#fff;
+  font-size:22px;
+  padding: 10px;
+  text-decoration: none;
+  margin-top:10px;
+  display: inline-block;
+  .border-radiuses(5px, 0, 0, 5px);
+  outline:none;
+}
+
+a.proj-repo-link:hover, a.proj-repo-link:focus {
+  background:#697D9C;
+
 }
 
 ul {
@@ -84,9 +100,17 @@ code {
     .border-radius(4px);
 }
 
+main {
+  background-color:rgba(77,141,246,.015);
+}
+
 main > section {
-    padding: 2px 120px;
-    margin-bottom: 10px;
+    padding: 0 120px;
+    margin-top: 20px;
+}
+
+main > section:nth-child(1) {
+    margin-top:0;
 }
 
 #config-options section {
@@ -103,7 +127,7 @@ section p {
 }
 
 #keyboard-nav-description dt {
-  background: #466A00;
+  background: #4B8BF4;
   color:#fff;
   display: inline-block;
   margin-top: 7px;
@@ -136,7 +160,7 @@ ul[role="tree"] li {
 }
 
 .font-awesome-tree .at-toggle, .fa-plus-square, .fa-minus-square {
-    color:#466A00;
+    color:#4B8BF4;
 }
 
 .font-awesome-tree .at-toggle {
@@ -165,8 +189,8 @@ ul[role="tree"] li {
 .font-awesome-tree li[aria-selected="true"] {
     border:none;
     outline:none;
-    color:#466A00;
-    border-left:solid 1px #466A00;
+    color:#5B6E8C;
+    border-left:solid 1px #5B6E8C;
 }
 
 li[aria-expanded="false"] > ul {
@@ -190,16 +214,23 @@ li[aria-expanded="true"] > ul {
         padding-right:20px;
     }
 
-    main > section:first-child h2 {
-        margin-top:0;
-    }
-
     section {
         padding-top:0;
     }
 
+  a.proj-repo-link {
+    margin-left:0px;
+
+  }
+
     h2 {
       .border-radius(0);
+      padding-top:1px;
+      padding-bottom:1px;
+      margin-right:-20px;
+      padding-left:10px;
+      padding-right:30px;
+
     }
 }
 
