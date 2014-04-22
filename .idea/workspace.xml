@@ -23,11 +23,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="2250">
-              <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+            <state vertical-scroll-proportion="0.13574661" vertical-offset="0" max-vertical-offset="2265">
+              <caret line="6" column="170" selection-start-line="6" selection-start-column="170" selection-end-line="6" selection-end-column="170" />
               <folding />
             </state>
           </provider>
@@ -63,10 +63,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a11yTree.less" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="a11yTree.less" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.864" vertical-offset="0" max-vertical-offset="3825">
+            <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="3825">
               <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
               <folding />
             </state>
@@ -109,8 +109,8 @@
         <option value="$PROJECT_DIR$/Gruntfile.js" />
         <option value="$PROJECT_DIR$/css/a11yTree.min.css" />
         <option value="$PROJECT_DIR$/css/mixins.less" />
-        <option value="$PROJECT_DIR$/a11yTree/index.html" />
         <option value="$PROJECT_DIR$/css/a11yTree.less" />
+        <option value="$PROJECT_DIR$/a11yTree/index.html" />
       </list>
     </option>
   </component>
@@ -528,18 +528,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
+    <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.375" vertical-offset="0" max-vertical-offset="2250">
-          <caret line="7" column="81" selection-start-line="7" selection-start-column="81" selection-end-line="7" selection-end-column="81" />
+        <state vertical-scroll-proportion="-7.2" vertical-offset="0" max-vertical-offset="3825">
+          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
+    <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.864" vertical-offset="0" max-vertical-offset="3825">
-          <caret line="36" column="0" selection-start-line="36" selection-start-column="0" selection-end-line="36" selection-end-column="0" />
+        <state vertical-scroll-proportion="0.13574661" vertical-offset="0" max-vertical-offset="2265">
+          <caret line="6" column="170" selection-start-line="6" selection-start-column="170" selection-end-line="6" selection-end-column="170" />
           <folding />
         </state>
       </provider>
