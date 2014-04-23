@@ -1,78 +1,86 @@
-@import url(mixins.less);
+@import "mixins.less";
 
 body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
     margin:0;
     padding: 0;
     font-weight:normal;
-
 }
 
 body {
-    font-family:"PT Sans";
-    font-size: 17px;
-    background-image: url('../img/ps_neutral.png');
+  font-family:"PT Sans";
+  font-size: 18px;
+  background-image: url('../img/ps_neutral.png');
 }
 
 body > header {
-    background-color: #4D8DF6;
-    color: #fff;
-    .opacity(.95);
-    padding: 10px 120px 0;
-    position: relative;
+  background-color: #4D8DF6;
+  color: #fff;
+  .opacity(.95);
+  padding: 0 120px 0;
+  position: relative;
 }
 
 body > header:before {
-    background: url("../img/park.jpg") no-repeat center center;
-    background-size:cover;
-    bottom: 0;
-    content: "";
-    display: block;
-    left: 0;
-    .opacity(.15);
-    position: absolute;
-    right: 0;
-    top: 0;
-    z-index: -1;
+  background: url("../img/park.jpg") no-repeat center center;
+  background-size:cover;
+  bottom: 0;
+  content: "";
+  display: block;
+  left: 0;
+  .opacity(.15);
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
 
 a {
-    color: #0000ff;
+  color: #0000ff;
   text-decoration: underline;
 }
 
 a:focus, a:hover {
-    outline:#0000ff dotted 1px;
-    background-color:#fff;
+  outline:#0000ff dotted 1px;
+  background-color:#fff;
 }
 
 li[aria-selected="true"]  {
-    outline: none;
+  outline: none;
+}
+
+h1, h2, a.proj-repo-link {
+  font-family:"PT Sans Narrow";
+}
+
+h2, a.proj-repo-link {
+  font-size: 42px;
+  padding: 4px 10px;
+  line-height:42px;
 }
 
 h1 {
-    font-size: 60px;
+  font-size: 70px;
+  line-height: 85px;
 }
 
 h2 {
-    font-size: 36px;
-    font-style:"PT Sans Narrow";
-    margin-bottom:5px;
-    padding: 2px 10px;
-    color:#5B6E8C;
-    background-color: rgba(45,97,182,.20);
-    font-weight:bold;
-    .border-radiuses(0, 5px, 5px, 0);
+  margin-bottom:5px;
+  color:#5B6E8C;
+  background-color: rgba(45,97,182,.20);
+  .border-radiuses(0, 5px, 5px, 0);
 }
 
 h3 {
-    margin-top: 10px;
+  margin-top: 10px;
+  font-weight:bold;
+  font-size:24px;
 }
 
 a.proj-repo-link {
   background:#5B6E8C;
   color:#fff;
-  font-size:22px;
-  padding: 10px;
+  font-size:36px;
+  padding: 4px 10px;
   text-decoration: none;
   margin-top:10px;
   display: inline-block;
@@ -82,22 +90,21 @@ a.proj-repo-link {
 
 a.proj-repo-link:hover, a.proj-repo-link:focus {
   background:#697D9C;
-
 }
 
 ul {
-    margin-top:0;
-    margin-bottom: 0;
+  margin-top:0;
+  margin-bottom: 0;
 }
 
 dt {
-    margin-top:7px;
+  margin-top:7px;
 }
 
 code {
-    background:#efefef;
-    padding: 3px;
-    .border-radius(4px);
+  background:#efefef;
+  padding: 3px;
+  .border-radius(4px);
 }
 
 main {
@@ -105,25 +112,25 @@ main {
 }
 
 main > section {
-    padding: 0 120px;
-    margin-top: 20px;
+  padding: 0 120px;
+  margin-top: 20px;
 }
 
 main > section:nth-child(1) {
-    margin-top:0;
+  margin-top:0;
 }
 
 #config-options section {
-    padding:0;
+  padding:0;
 }
 
 header > p {
-    font-size:24px;
-    line-height:24px;
+  font-size:24px;
+  line-height:26px;
 }
 
 section p {
-    padding: 10px 20px;
+  padding: 10px 20px;
 }
 
 #keyboard-nav-description dt {
@@ -136,115 +143,132 @@ section p {
 }
 
 .code-example {
-    margin-top:10px;
-    background: #efefef;
-    font-family: courier;
-    font-size: 16px;
-    line-height: 18px;
-    max-width: 500px;
-    padding:10px 10px;
-    margin-bottom: 10px;
+  margin-top:10px;
+  margin-bottom: 10px;
+  background: #efefef;
+  font-family: courier;
+  font-size: 16px;
+  line-height: 18px;
+  max-width: 500px;
+  padding:10px 10px;
 }
 
 #code-example-real {
-    margin-top: 5px;
+  margin-top: 5px;
 }
 
 ul[role="tree"] li {
-    list-style-type: none;
+  list-style-type: none;
 }
 
 .font-awesome-tree > ul {
-    padding:10px 0 10px 30px;
-    margin:0;
+  padding:10px 0 10px 30px;
+  margin:0;
 }
 
 .font-awesome-tree .at-toggle, .fa-plus-square, .fa-minus-square {
-    color:#4B8BF4;
+  color:#4B8BF4;
 }
 
 .font-awesome-tree .at-toggle {
-    float: left;
-    margin-right: 4px;
+  float: left;
+  margin-right: 4px;
 }
 
 .at-has-children {
-    margin-left: -11px;
+  margin-left: -11px;
 }
 
 .font-awesome-tree .at-has-children {
-    margin-left: -20px;
+  margin-left: -20px;
 }
 
 .font-awesome-tree li {
-    padding-left:10px;
-    border-left: dotted 1px transparent;
-    margin-left:-1px;
+  padding-left:10px;
+  border-left: dotted 1px transparent;
+  margin-left:-1px;
 }
 
 .font-awesome-tree li[aria-selected="true"]  ul {
-    color:#000;
+  color:#000;
 }
 
 .font-awesome-tree li[aria-selected="true"] {
-    border:none;
-    outline:none;
-    color:#5B6E8C;
-    border-left:solid 1px #5B6E8C;
+  border:none;
+  outline:none;
+  color:#5B6E8C;
+  border-left:solid 1px #5B6E8C;
 }
 
 li[aria-expanded="false"] > ul {
-    display:none;
+  display:none;
 }
 
 li[aria-expanded="true"] > ul {
-    display:block;
+  display:block;
 }
 
 @media ( max-width : 1025px) {
-    body > header, main > section {
-        padding-left:80px;
-        padding-right:80px;
-    }
+  body > header, main > section {
+    padding-left:80px;
+    padding-right:80px;
+  }
 }
 
 @media ( max-width : 769px) {
-    body > header, main > section {
-        padding-left:20px;
-        padding-right:20px;
-    }
+  body > header, main > section {
+    padding-left:20px;
+    padding-right:20px;
+  }
 
-    section {
-        padding-top:0;
-    }
+  section {
+    padding-top:0;
+  }
 
   a.proj-repo-link {
     margin-left:0px;
-
   }
 
-    h2 {
-      .border-radiuses(0, 0, 5px, 0);
-      padding-top:1px;
-      padding-bottom:1px;
-      margin-right:-20px;
-      padding-left:10px;
-      padding-right:30px;
-
-    }
+  h2, a.proj-repo-link {
+    .border-radiuses(0, 0, 5px, 0);
+    font-size:36px;
+    line-height:38px;
+    margin-right:-20px;
+    padding-left:10px;
+    padding-right:30px;
+  }
 }
 
-@media ( max-width : 385px) {
-    h1 {
-        font-size: 39px;
-    }
+@media ( max-width : 485px) {
+  header > p {
+    font-size:22px;
+  }
+}
 
-    h2 {
-        font-size: 32px;
-    }
+@media ( max-width : 415px) {
+  h1 {
+    font-size: 60px;
+    line-height:75px;
+  }
 
-    header > p {
-        font-size:20px;
-        line-height: 21px;
-    }
+  h2 {
+    font-size: 32px;
+  }
+}
+
+@media ( max-width : 415px) {
+  h1 {
+    font-size: 52px;
+    line-height:65px;
+  }
+
+  header > p {
+    font-size:20px;
+    line-height:24px;
+  }
+
+  h2, a.proj-repo-link {
+    font-size:32px;
+    line-height:35px;
+  }
 }
