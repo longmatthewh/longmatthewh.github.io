@@ -5,7 +5,12 @@ module.exports = function(grunt) {
         less: {
             production: {
                 options: {
-                    cleancss: true
+                    compress: true,
+                    yuicompress: true,
+                    sourceMap: true,
+                    sourceMapFilename: 'css/a11yTree.min.css.map',
+                    sourceMapURL: '../css/a11yTree.min.css.map',
+                    sourceMapBasepath: 'css'
                 },
                 files: {
                     "css/a11yTree.min.css": "css/a11yTree.less"
