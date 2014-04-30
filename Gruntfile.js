@@ -16,9 +16,20 @@ module.exports = function(grunt) {
                     "css/a11yTree.min.css": "css/a11yTree.less"
                 }
             }
+        },
+        watch: {
+            scripts: {
+                files: ['css/a11yTree.less'],
+                tasks: ['less'],
+                options : {
+                    spawn : false
+                }
+
+            }
         }
     });
 
+    grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
     grunt.registerTask('default', ['less']);
 };
