@@ -81,24 +81,24 @@
                 Suppose you have a list of nested lists in your DOM that you wish to turn into a tree.
                 <div id="simple-list-example" class="code-example">
                     <ul>
-                        <li>parent 1
+                        <li><span class="tree-item-label">parent 1</span>
                             <ul>
-                                <li>child 1
+                                <li><span class="tree-item-label">child 1</span>
                                     <ul>
-                                        <li>grandchild 1</li>
-                                        <li>grandchild 2</li>
+                                        <li><span class="tree-item-label">grandchild 1</span></li>
+                                        <li><span class="tree-item-label">grandchild 2</span></li>
                                     </ul>
                                 </li>
-                                <li>child 2</li>
+                                <li><span class="tree-item-label">child 2</span></li>
                             </ul>
                         </li>
-                        <li>parent 2
+                        <li><span class="tree-item-label">parent 2</span>
                             <ul>
-                                <li>child 1</li>
-                                <li>child 2
+                                <li><span class="tree-item-label">child 1</span></li>
+                                <li><span class="tree-item-label">child 2</span>
                                     <ul>
-                                        <li>grandchild 1</li>
-                                        <li>grandchild 2</li>
+                                        <li><span class="tree-item-label">grandchild 1</span></li>
+                                        <li><span class="tree-item-label">grandchild 2</span></li>
                                     </ul>
                                 </li>
                             </ul>
@@ -130,6 +130,7 @@
                 customToggle : {
                     html:'<i class="fa fa-plus-square"></i>'
                 },
+                treeItemLabelSelector : '.tree-item-label',
                 onCollapse: function($toggle) {
                     $toggle.children('.at-toggle').find('.fa-minus-square').removeClass('fa-minus-square').addClass('fa-plus-square');
                 },
