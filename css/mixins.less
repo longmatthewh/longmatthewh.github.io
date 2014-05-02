@@ -29,9 +29,24 @@
   background-clip:         padding-box;
 }
 
-
 .opacity (@opacity) {
   -webkit-opacity: 	@opacity;
   -moz-opacity: @opacity;
   opacity: @opacity;
+}
+
+.clearfix() {
+  &:before,&:after{content:" ";display:table}
+  &:after{clear:both}
+}
+
+.horizontal-list() {
+  ul, li {
+    list-style: none;
+    padding-left:0;
+  }
+
+  li {
+    display:inline-block;
+  }
 }

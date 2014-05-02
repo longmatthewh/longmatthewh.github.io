@@ -1,4 +1,5 @@
 @import "mixins.less";
+@header-font-family: "PT Sans Narrow";
 
 body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
     margin:0;
@@ -6,17 +7,51 @@ body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
     font-weight:normal;
 }
 
+h1 {
+  font-family:@header-font-family;
+  font-size: 70px;
+  line-height: 85px;
+}
+
+h3 {
+  margin-top: 10px;
+  font-weight:bold;
+  font-size:24px;
+}
+
+dt {
+  margin-top:7px;
+}
+
+ul {
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+header > p {
+  font-size:24px;
+  line-height:26px;
+}
+
+section p {
+  padding: 10px 20px;
+
+}
+
 body {
   font-family:"PT Sans";
   font-size: 18px;
   background-image: url('../img/ps_neutral.png');
 
-  > header {
+  > header, > footer {
     background-color: #4D8DF6;
     color: #fff;
     .opacity(.95);
-    padding: 0 120px 0;
     position: relative;
+  }
+
+  > header {
+    padding: 0 120px 0;
 
     &:before {
       background: url("../img/park.jpg") no-repeat center center;
@@ -35,31 +70,19 @@ body {
 
   > footer {
     margin-top:20px;
-    color:#fff;
-    background-color: #4D8DF6;
-    .opacity(.95);
     padding: 20px 120px;
-    position: relative;
 
-    &:before,&:after{content:" ";display:table}
-    &:after{clear:both}
+    .clearfix();
+
+    .horizontal-list();
 
     h2, ul{
       float:left;
       font-size:18px;
     }
 
-    ul, li {
-      list-style: none;
-      padding-left:0;
-    }
-
     ul {
       margin-left:10px;
-    }
-
-    li {
-      display:inline-block;
     }
 
     a {
@@ -85,43 +108,6 @@ a {
   }
 }
 
-h1, main h2, a.proj-repo-link {
-  font-family:"PT Sans Narrow";
-}
-
-main h2, a.proj-repo-link {
-  font-size: 42px;
-  padding: 4px 10px;
-  line-height:42px;
-}
-
-h1 {
-  font-size: 70px;
-  line-height: 85px;
-}
-
-main h2 {
-  margin-bottom:5px;
-  color:#5B6E8C;
-  background-color: rgba(45,97,182,.20);
-  .border-radiuses(0, 5px, 5px, 0);
-}
-
-h3 {
-  margin-top: 10px;
-  font-weight:bold;
-  font-size:24px;
-}
-
-ul {
-  margin-top:0;
-  margin-bottom: 0;
-}
-
-dt {
-  margin-top:7px;
-}
-
 code {
   background:#efefef;
   padding: 1px;
@@ -132,7 +118,18 @@ code {
 main {
   background-color:rgba(77,141,246,.015);
 
-  & > section {
+  h2 {
+    margin-bottom:5px;
+    color:#5B6E8C;
+    background-color: rgba(45,97,182,.20);
+    font-family:@header-font-family;
+    font-size: 42px;
+    padding: 4px 10px;
+    line-height:42px;
+    .border-radiuses(0, 5px, 5px, 0);
+  }
+
+  > section {
     padding: 0 120px;
     margin-top: 20px;
 
@@ -143,9 +140,11 @@ main {
 }
 
 a.proj-repo-link {
+  font-family:@header-font-family;
   background:#5B6E8C;
   color:#fff;
   font-size:36px;
+  line-height:42px;
   padding: 4px 10px;
   text-decoration: none;
   margin-top:10px;
@@ -160,16 +159,6 @@ a.proj-repo-link {
 
 #config-options section {
   padding:0;
-}
-
-header > p {
-  font-size:24px;
-  line-height:26px;
-}
-
-section p {
-  padding: 10px 20px;
-
 }
 
 #wai-aria dt, #keyboard-nav-description dt {
