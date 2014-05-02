@@ -62,19 +62,25 @@
                         <dd>navigates to the last expanded node in the tree</dd>
                     </dl>
                 </section>
-                <!-- section>
-                    <h3>ARIA</h3>
+                <section id="wai-aria">
+                    <h3>WAI-ARIA</h3>
                     <dl>
-                        <dt><code>tree</code> and <code>treeitem</code> roles</dt>
-                        <dd>navigates down to the next expanded tree node</dd>
-                        <dt><i class="fa fa-caret-square-o-up"></i> up</dt>
-                        <dd>navigates up to the previous expanded tree node</dd>
-                        <dt><i class="fa fa-caret-square-o-right"></i> right</dt>
-                        <dd>expands the tree node in focus if it's collapsed and has children, or navigates to the first child node of an expanded parent</dd>
-                        <dt><i class="fa fa-caret-square-o-left"></i> left</dt>
-                        <dd>collapses the tree node in focus if it's expanded, or navigates to the parent node</dd>
+                        <dt>tree and group</dt>
+                        <dd>roles that identifies the parent tree <code>ul</code> and the child <code>ul</code> elements</dd>
+                        <dt>treeitem</dt>
+                        <dd>role that identifies each <code>li</code> as an item in the tree</dd>
+                        <dt>aria-level</dt>
+                        <dd>attribute applied to each <code>li</code> element to indentify which nesting level the item belongs to</dd>
+                        <dt>aria-expanded</dt>
+                        <dd>attribute applied to each <code>li</code> element that has children&mdash;this is set to true when the child list is expanded</dd>
+                        <dt>aria-selected</dt>
+                        <dd>attribute applied to each <code>li</code> element and set to true when the item is navigated to&mdash;only one item in the entire tree can be identified as selected at once</dd>
+                        <dt>aria-activedescendant</dt>
+                        <dd>attribute applied to parent tree <code>ul</code> element and set to the id of the <code>li</code> element currently identified as selected</dd>
+                        <dt>aria-labelledby</dt>
+                        <dd>attribute applied to each <code>ul</code> element and set to the id of the text/label container of the list</dd>
                     </dl>
-                </section-->
+                </section>
             </section>
             <section>
                 <h2><i class="fa fa-code"></i> How it Works</h2>
@@ -122,6 +128,32 @@
             </section>
 
         </main>
+        <footer>
+            Copyright&nbsp;©&nbsp;2014
+            <section>
+                <h2>Contact Matt Long</h2>
+                <ul>
+                    <li>
+                        <a href="mailto:longmatthewh@gmail.com">
+                            <span class="offscreen">e-mail Matt Long</span>
+                            <i class="fa fa-envelope-o" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="//plus.google.com/116642379036438033184?prsrc=3" rel="author" target="_top" style="text-decoration:none;">
+                            <span class="offscreen">connect Matt Long at Google+</span>
+                            <i class="fa fa-google-plus" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="http://www.linkedin.com/pub/matt-long/5a/839/a17" style="text-decoration:none;">
+                            <span class="offscreen">connect with Matt Long at LinkedIn</span>
+                            <i class="fa fa-linkedin" aria-hidden="true"></i>
+                        </a>
+                    </li>
+                </ul>
+            </section>
+        </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="../js/jquery.a11yTree.min.js"></script>
         <script>
