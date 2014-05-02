@@ -262,14 +262,14 @@ ul[role="tree"] {
 }
 
 @media ( max-width : 1025px) {
-  body > header, main > section {
+  body > header, main > section, body > footer {
     padding-left:80px;
     padding-right:80px;
   }
 }
 
 @media ( max-width : 769px) {
-  body > header, main > section {
+  body > header, main > section, body > footer {
     padding-left:20px;
     padding-right:20px;
   }
@@ -282,7 +282,7 @@ ul[role="tree"] {
     margin-left:0;
   }
 
-  h2, a.proj-repo-link {
+  main h2, a.proj-repo-link {
     .border-radiuses(0, 0, 5px, 0);
     font-size:36px;
     line-height:38px;
@@ -304,7 +304,7 @@ ul[role="tree"] {
     line-height:75px;
   }
 
-  h2 {
+  main h2 {
     font-size: 32px;
   }
 }
@@ -320,7 +320,7 @@ ul[role="tree"] {
     line-height:24px;
   }
 
-  h2, a.proj-repo-link {
+  main h2, a.proj-repo-link {
     font-size:32px;
     line-height:35px;
   }
