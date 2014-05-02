@@ -41,14 +41,13 @@ body {
     padding: 20px 120px;
     position: relative;
 
+    &:before,&:after{content:" ";display:table}
+    &:after{clear:both}
+
     h2, ul{
       float:left;
       font-size:18px;
     }
-
-    section:before,section:after{content:" ";display:table}
-    section:after{clear:both}
-
 
     ul, li {
       list-style: none;
