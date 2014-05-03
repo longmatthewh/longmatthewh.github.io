@@ -9,7 +9,7 @@ body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
 
 h1 {
   font-family:@header-font-family;
-  font-size: 70px;
+  font-size: 64px;
   line-height: 85px;
 }
 
@@ -17,10 +17,6 @@ h3 {
   margin-top: 10px;
   font-weight:bold;
   font-size:24px;
-}
-
-dt {
-  margin-top:7px;
 }
 
 ul {
@@ -85,6 +81,10 @@ body {
       margin-left:10px;
     }
 
+    li {
+      margin-left:5px;
+    }
+
     a {
       color:#fff;
       border-bottom:solid 1px transparent;
@@ -123,9 +123,9 @@ main {
     color:#5B6E8C;
     background-color: rgba(45,97,182,.20);
     font-family:@header-font-family;
-    font-size: 42px;
+    font-size: 36px;
     padding: 4px 10px;
-    line-height:42px;
+    line-height:38px;
     .border-radiuses(0, 5px, 5px, 0);
   }
 
@@ -144,7 +144,7 @@ a.proj-repo-link {
   background:#5B6E8C;
   color:#fff;
   font-size:36px;
-  line-height:42px;
+  line-height:38px;
   padding: 4px 10px;
   text-decoration: none;
   margin-top:10px;
@@ -161,13 +161,26 @@ a.proj-repo-link {
   padding:0;
 }
 
-#wai-aria dt, #keyboard-nav-description dt {
-  background: #4B8BF4;
-  color:#fff;
+dl {
+  padding-left:15px;
+  border-left:dotted 1px #ccc;
+  margin-top:10px;
+  margin-bottom:15px;
+}
+
+dt {
+  color:#4B8BF4;
   display: inline-block;
-  margin-top: 7px;
-  padding: 2px 4px;
-  .border-radius(4px);
+  margin-top: 5px;
+  font-weight: normal;
+
+  &:first-child {
+    margin-top:0;
+  }
+}
+
+#idea dt {
+  color:inherit;
 }
 
 .code-example {
