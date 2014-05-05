@@ -84,13 +84,13 @@
                 </section>
             </section>
             <section>
-                <h2><i class="fa fa-code"></i> How it Works</h2>
+                <h2><i class="fa fa-code"></i> Using a11yTree</h2>
                 Suppose you have a list of nested lists in your DOM that you wish to turn into a tree.
                 <div id="simple-list-example" class="code-example">
                     <ul>
-                        <li><span class="tree-item-label">parent 1</span>
+                        <li><i class="fa fa-plus-square"></i><span class="tree-item-label">parent 1</span>
                             <ul>
-                                <li><span class="tree-item-label">child 1</span>
+                                <li><i class="fa fa-plus-square"></i><span class="tree-item-label">child 1</span>
                                     <ul>
                                         <li><span class="tree-item-label">grandchild 1</span></li>
                                         <li><span class="tree-item-label">grandchild 2</span></li>
@@ -99,10 +99,10 @@
                                 <li><span class="tree-item-label">child 2</span></li>
                             </ul>
                         </li>
-                        <li><span class="tree-item-label">parent 2</span>
+                        <li><i class="fa fa-plus-square"></i><span class="tree-item-label">parent 2</span>
                             <ul>
                                 <li><span class="tree-item-label">child 1</span></li>
-                                <li><span class="tree-item-label">child 2</span>
+                                <li><i class="fa fa-plus-square"></i><span class="tree-item-label">child 2</span>
                                     <ul>
                                         <li><span class="tree-item-label">grandchild 1</span></li>
                                         <li><span class="tree-item-label">grandchild 2</span></li>
@@ -157,15 +157,13 @@
         <script>
             $('#simple-list-example > ul').clone().appendTo('#code-example-real');
             $('#code-example-real > ul').a11yTree({
-                customToggle : {
-                    html:'<i class="fa fa-plus-square"></i>'
-                },
+                toggleSelector : 'i.fa',
                 treeItemLabelSelector : '.tree-item-label',
-                onCollapse: function($toggle) {
-                    $toggle.children('.at-toggle').find('.fa-minus-square').removeClass('fa-minus-square').addClass('fa-plus-square');
+                onCollapse: function($item) {
+                    $item.children('.at-toggle').removeClass('fa-minus-square').addClass('fa-plus-square');
                 },
-                onExpand: function($toggle) {
-                    $toggle.children('.at-toggle').find('.fa-plus-square').removeClass('fa-plus-square').addClass('fa-minus-square');
+                onExpand: function($item) {
+                    $item.children('.at-toggle').removeClass('fa-plus-square').addClass('fa-minus-square');
                 }
             });
         </script>
