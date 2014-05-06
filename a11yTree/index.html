@@ -4,7 +4,7 @@
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>a11yTree jQuery tree plugin</title>
-        <meta name="description" content="A very lightweight, accessible, and uninvasive jQuery plugin that transforms nested lists into an expanding and collapsing tree.">
+        <meta name="description" content="A very lightweight and uninvasive jQuery plugin that transforms an HTML tree of nested unorded lists into an expanding and collapsing tree that's universally accessible. a11yTree supports mouse and keyboard navigation, and assistive technologies using WAI-ARIA roles and attributes.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="apple-touch-icon-precomposed" sizes="144x144" href="../img/icon/apple-touch-icon-144-precomposed.png">
         <link rel="apple-touch-icon-precomposed" sizes="114x114" href="../img/icon/apple-touch-icon-114-precomposed.png">
@@ -19,13 +19,13 @@
     <body>
         <header>
             <h1>jquery.a11yTree</h1>
-            <p>A very lightweight, accessible, and uninvasive jQuery plugin that transforms nested lists into an expanding and collapsing tree.</p>
+            <p>A very lightweight and uninvasive jQuery plugin that transforms an HTML tree of nested unorded lists into an expanding and collapsing tree that's universally accessible.</p>
             <a href="https://github.com/longmatthewh/jquery-a11ytree" class="proj-repo-link"><i class="fa fa-github-square"></i> GitHub Project</a>
         </header>
         <main>
             <section id="idea">
                 <h2><i class="fa fa-lightbulb-o"></i> The Idea</h2>
-                Adding functionality to expand and collapse tree nodes and their nested children is fairly trivial. Unfortunately, many implementations don't include the functionality people using assistive technologies depend on, or are just more complex than what's needed. I also wanted to keep the amount of added classes to a bare minimum by relying on HTML semantics and <a href="http://www.w3.org/TR/wai-aria/">ARIA roles and attributes</a>.
+                Many tree implementations don't include the functionality people using assistive technologies depend on, or are just more complex than what's needed. I also wanted to keep the amount of added classes to a bare minimum by relying on HTML semantics and <a href="http://www.w3.org/TR/wai-aria/">WAI-ARIA roles and attributes</a>.
                 <h3>Inspirations</h3>
                 <dl>
                     <dt><a href="http://code.google.com/p/dynatree/">DynaTree</a> and <a href="https://github.com/mar10/fancytree/">Fancytree</a> jQuery plugins</dt>
@@ -37,11 +37,11 @@
             <section>
                 <header>
                     <h2><i class="fa fa-compass"></i> Navigation</h2>
-                    a11yTree was built with universal web accessibility in mind. So, not only does it provide the typical mouse navigation via toggles, it also adds keyboard navigation, and adds additional semantics to the markup via ARIA roles, attributes and states.
+                    a11yTree was built with universal web accessibility in mind. So, not only does it provide the typical mouse navigation via toggles, it also adds keyboard navigation, and additional semantics to the markup using WAI-ARIA roles and attributes.
                 </header>
                 <section>
                     <h3>Mouse</h3>
-                    By default the only element this plugin injects in the DOM is a toggle element with class <code>.at-toggle</code>. This element is prepended to any <code>li</code> element that has a sublist and is intended to be styled as expand <i class="fa fa-plus-square"></i> and collapse <i class="fa fa-minus-square"></i> controls. Handlers listening to the click event are attached to these elements.
+                    The tree toggle controls are identifed with the class <code>.at-toggle</code> and are intended to be styled as expand <i class="fa fa-plus-square"></i> and collapse <i class="fa fa-minus-square"></i> controls. Handlers listening to the click event are attached to these elements.
                 </section>
                 <section id="keyboard-nav-description">
                     <h3>Keyboard</h3>
@@ -65,13 +65,14 @@
                 </section>
                 <section id="wai-aria">
                     <h3>WAI-ARIA</h3>
+                    The following ARIA roles and attributes add even more semantic meaning to the HTML markup which is utilized by assistive technologies, and can be used as CSS selectors as opposed to classes that don't have meaning outside of the context of your markup.
                     <dl>
                         <dt>tree and group</dt>
-                        <dd>roles that identifies the parent tree <code>ul</code> and the child <code>ul</code> elements</dd>
+                        <dd>roles that identify the parent tree <code>ul</code> and the child <code>ul</code> elements</dd>
                         <dt>treeitem</dt>
                         <dd>role that identifies each <code>li</code> as an item in the tree</dd>
                         <dt>aria-level</dt>
-                        <dd>attribute applied to each <code>li</code> element to indentify which nesting level the item belongs to</dd>
+                        <dd>attribute applied to each <code>li</code> element to indentify which nesting level it belongs to</dd>
                         <dt>aria-expanded</dt>
                         <dd>attribute applied to each <code>li</code> element that has children&mdash;this is set to true when the child list is expanded</dd>
                         <dt>aria-selected</dt>
