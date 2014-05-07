@@ -263,11 +263,21 @@ ul[role="tree"] {
     border-left: dotted 1px transparent;
     margin-left:-1px;
 
+    .tree-item-label {
+      padding:0 2px;
+      border:dotted 1px transparent;
+    }
+
     &[aria-selected="true"] {
       border:none;
       outline:none;
       color:#5B6E8C;
       border-left:solid 1px #5B6E8C;
+
+      > .tree-item-label {
+        border:dotted 1px #5B6E8C;
+        background-color: #fff;
+      }
 
       ul {
         color:#000;

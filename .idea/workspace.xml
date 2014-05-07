@@ -23,10 +23,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7058824" vertical-offset="2037" max-vertical-offset="3105">
+            <state vertical-scroll-proportion="-19.5" vertical-offset="2037" max-vertical-offset="3105">
               <caret line="167" column="64" selection-start-line="167" selection-start-column="64" selection-end-line="167" selection-end-column="64" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -87,11 +87,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="a11yTree.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="a11yTree.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-9.12" vertical-offset="2439" max-vertical-offset="5400">
-              <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
+            <state vertical-scroll-proportion="0.73846155" vertical-offset="3690" max-vertical-offset="5550">
+              <caret line="278" column="30" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
               <folding />
             </state>
           </provider>
@@ -134,8 +134,8 @@
         <option value="$PROJECT_DIR$/css/a11yTree.min.css" />
         <option value="$PROJECT_DIR$/css/mixins.less" />
         <option value="$PROJECT_DIR$/Gruntfile.js" />
-        <option value="$PROJECT_DIR$/css/a11yTree.less" />
         <option value="$PROJECT_DIR$/a11yTree/index.html" />
+        <option value="$PROJECT_DIR$/css/a11yTree.less" />
       </list>
     </option>
   </component>
@@ -685,23 +685,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-9.12" vertical-offset="2439" max-vertical-offset="5400">
-          <caret line="193" column="0" selection-start-line="193" selection-start-column="0" selection-end-line="193" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/a11yTree/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7058824" vertical-offset="2037" max-vertical-offset="3105">
+        <state vertical-scroll-proportion="-19.5" vertical-offset="2037" max-vertical-offset="3105">
           <caret line="167" column="64" selection-start-line="167" selection-start-column="64" selection-end-line="167" selection-end-column="64" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/a11yTree.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.73846155" vertical-offset="3690" max-vertical-offset="5550">
+          <caret line="278" column="30" selection-start-line="278" selection-start-column="30" selection-end-line="278" selection-end-column="30" />
+          <folding />
         </state>
       </provider>
     </entry>
