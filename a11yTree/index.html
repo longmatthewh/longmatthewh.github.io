@@ -72,7 +72,7 @@
                         <dt>treeitem</dt>
                         <dd>role that identifies each <code>li</code> as an item in the tree</dd>
                         <dt>aria-level</dt>
-                        <dd>attribute applied to each <code>li</code> element to indentify which nesting level it belongs to</dd>
+                        <dd>attribute applied to each <code>li</code> element to identify which nesting level it belongs to</dd>
                         <dt>aria-expanded</dt>
                         <dd>attribute applied to each <code>li</code> element that has children&mdash;this is set to true when the child list is expanded</dd>
                         <dt>aria-selected</dt>
@@ -86,8 +86,9 @@
             </section>
             <section>
                 <h2><i class="fa fa-code"></i> Using a11yTree</h2>
-                Suppose you have a list of nested lists in your DOM that you wish to turn into a tree.
+                While a11yTree can be configured to insert toggle controls and doesn't require labels, being unobtrusive, uninvasive, and universally accessible are some of the goals of a11yTree. So, ideally, you're starting with a set of nested unordered lists with toggle controls and labels as shown below:
                 <div id="simple-list-example" class="code-example">
+                    <h3>a11yTree example</h3>
                     <ul>
                         <li><i class="fa fa-plus-square"></i><span class="tree-item-label">parent 1</span>
                             <ul>
@@ -113,21 +114,33 @@
                         </li>
                     </ul>
                 </div>
-                Now apply a11yTree to the parent un ordered list <code>ul</code> element.
+                Now apply a11yTree to the parent unordered list <code>ul</code> element.
                 <div class="code-example">
-                    <code>$('ul.code-example').a11yTree();</code>
+                    <code>
+                        $('#code-example-real > ul').a11yTree({
+                        <br>&nbsp;<span class="option">treeLabelId</span>:'tree-label',
+                        <br>&nbsp;<span class="option">toggleSelector</span>:'i.fa',
+                        <br>&nbsp;<span class="option">treeItemLabelSelector</span>:'.tree-item-label',
+                        <br>&nbsp;<span class="option">onCollapse</span>:function($item) {
+                        <br>&nbsp;&nbsp;customCollapse($item);
+                        <br>&nbsp;},
+                        <br>&nbsp;<span class="option">onExpand</span>:function($item) {
+                        <br>&nbsp;&nbsp;customExpand($item);
+                        <br>&nbsp;}
+                        <br>});
+                    </code>
                 </div>
                 And you get this:
                 <div id="code-example-real" class="font-awesome-tree"></div>
             </section>
-            <section id="config-options">
+            <!--section id="config-options">
                 <h2><i class="fa fa-cogs"></i> Config Options</h2>
                 <section>
                     <h3>Defaults</h3>
                     The example above does pass in some options to utilize <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon fonts as the toggles. When no options are specified, the toggles can be styled with techniques like using background images or <code>:before</code> or <code>:after</code> pseudo elements.
                     <div id="options-default"></div>
                 </section>
-            </section>
+            </section-->
 
         </main>
         <footer>
@@ -151,13 +164,21 @@
                             <i class="fa fa-linkedin" aria-hidden="true"></i>
                         </a>
                     </li>
+                    <li>
+                        <a href="https://github.com/longmatthewh" style="text-decoration:none;">
+                            <span class="offscreen">follow Matt Long at GitHub</span>
+                            <i class="fa fa-github-alt" aria-hidden="true"></i>
+                        </a>
+                    </li>
                 </ul>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="../js/jquery.a11yTree.min.js"></script>
         <script>
-            $('#simple-list-example > ul').clone().appendTo('#code-example-real');
+            $('#code-example-real').html($('#simple-list-example').html());
+            $('#code-example-real').find('h3').attr('id', 'tree-label');
             $('#code-example-real > ul').a11yTree({
+                treeLabelId :'tree-label',
                 toggleSelector : 'i.fa',
                 treeItemLabelSelector : '.tree-item-label',
                 onCollapse: function($item) {
