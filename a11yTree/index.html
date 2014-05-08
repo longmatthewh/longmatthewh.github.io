@@ -133,14 +133,28 @@
                 And you get this:
                 <div id="code-example-real" class="font-awesome-tree"></div>
             </section>
-            <!--section id="config-options">
+            <section id="config-options">
                 <h2><i class="fa fa-cogs"></i> Config Options</h2>
                 <section>
-                    <h3>Defaults</h3>
-                    The example above does pass in some options to utilize <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a> icon fonts as the toggles. When no options are specified, the toggles can be styled with techniques like using background images or <code>:before</code> or <code>:after</code> pseudo elements.
-                    <div id="options-default"></div>
+                    <h3>Tree and Tree Item Labels</h3>
+                    While configuring a11yTree to be able to identify labels for the entire tree and each tree item is optional&mdash;assistive technologies won't be able to provide the best user experience. For example, without tree item labels, screen readers are extremely verbose and will end up reading aloud not just the selected node, but also all its expand children.
+                    <dl>
+                        <dt>treeLabelId</dt>
+                        <dd>the <code>id</code> of an element in the DOM that contains the label for the tree</dd>
+                        <dt>treeItemLabelSelector</dt>
+                        <dd>the selector for the elements in the DOM containing the label for each tree item&mdash;an <code>id</code> will be added to each element if one doesn't already exist, which will be used as the value of the <code>aria-labelledby</code> attribute for each child <code>ul</code> element</dd>
+                    </dl>
                 </section>
-            </section-->
+                <section>
+                    <h3>Toggle Controls</h3>
+                    a11yTree is intended to provide access for all users, including mouse users. a11yTree provides the ability to work with existing toggle elements, or will inject them into the DOM for you.
+                    <dl>
+                        <dt>toggleSelector</dt>
+                        <dd>the selector for the toggle elements already in the DOM&mdash;the class <code>.at-toggle</code> will be added to each element, which will have handlers listening to the click event.</dd>
+
+                    </dl>
+                </section>
+            </section>
 
         </main>
         <footer>
