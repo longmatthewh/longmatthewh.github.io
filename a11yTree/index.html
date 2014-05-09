@@ -150,8 +150,11 @@
                     a11yTree is intended to provide access for all users, including mouse users. a11yTree provides the ability to work with existing toggle elements, or will inject them into the DOM for you.
                     <dl>
                         <dt>toggleSelector</dt>
-                        <dd>the selector for the toggle elements already in the DOM&mdash;the class <code>.at-toggle</code> will be added to each element, which will have handlers listening to the click event.</dd>
-
+                        <dd>the selector for the toggle elements already in the DOM&mdash;the class <code>.at-toggle</code> will be added to each element, which will have handlers listening to the click event&mdash;your HTML may not have a toggle element, so this is optional</dd>
+                        <dt>customToggle.html</dt>
+                        <dd>if a toggle element doesn't already exist in the DOM, use this option to insert custom toggle HTML within the <code>.at-toggle</code> element&mdash;this is optional</dd>
+                        <dt>insertToggle</dt>
+                        <dd>if neither <code>toggleSelector</code> nor <code>customToggle.html</code> are configured an empty element with the class <code>.at-toggle</code> will be inserted into each <code>li</code> element with a nested list&mdash;setting this to <strong>false</strong> will result in a11yTree having no knowledge of toggle elements</dd>
                     </dl>
                 </section>
             </section>
