@@ -1,5 +1,7 @@
 @import "mixins.less";
 @header-font-family: "PT Sans Narrow";
+/*@term-and-toggle: #316acc;*/
+@term-and-toggle: hsl(218, 61%, 50%);
 
 body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
     margin:0;
@@ -42,7 +44,7 @@ body {
   background-image: url('../img/ps_neutral.png');
 
   > header, > footer {
-    background-color: #4D8DF6;
+    background-color: @term-and-toggle;
     color: #fff;
     .opacity(.95);
     position: relative;
@@ -112,18 +114,18 @@ a {
 
 code {
   background:#efefef;
-  padding: 1px;
+  padding: 0 1px;
   border: solid 1px #ddd;
   .border-radius(4px);
 }
 
 main {
-  background-color:rgba(77,141,246,.015);
+  background-color:rgba(255,255,255,.25);
 
   h2 {
     margin-bottom:5px;
-    color:#5B6E8C;
-    background-color: rgba(45,97,182,.20);
+    color:darken(@term-and-toggle,15%);
+    background-color:darken(hsla(218, 61%, 50%,.08),20%);
     font-family:@header-font-family;
     font-size: 36px;
     padding: 4px 10px;
@@ -143,7 +145,7 @@ main {
 
 a.proj-repo-link {
   font-family:@header-font-family;
-  background:#5B6E8C;
+  background:darken(@term-and-toggle,15%);
   color:#fff;
   font-size:36px;
   line-height:38px;
@@ -155,7 +157,7 @@ a.proj-repo-link {
   outline:none;
 
   &:focus, &:hover {
-    background:#697D9C;
+    background:lighten(@term-and-toggle,2%);
   }
 }
 
@@ -171,7 +173,7 @@ dl {
 }
 
 dt {
-  color:#4B8BF4;
+  color:@term-and-toggle;
   display: inline-block;
   margin-top: 5px;
   font-weight: normal;
@@ -199,7 +201,7 @@ dt {
     .border-radius(4px);
 
     .option {
-      color:#4B8BF4;
+      color:@term-and-toggle;
     }
   }
 
@@ -272,11 +274,11 @@ ul[role="tree"] {
     &[aria-selected="true"] {
       border:none;
       outline:none;
-      color:#5B6E8C;
-      border-left:solid 1px #5B6E8C;
+      color:@term-and-toggle;
+      border-left:solid 1px @term-and-toggle;
 
       > .tree-item-label {
-        border:dotted 1px #5B6E8C;
+        border:dotted 1px @term-and-toggle;
         background-color: #fff;
       }
 
@@ -288,7 +290,7 @@ ul[role="tree"] {
 }
 
 .fa-plus-square, .fa-minus-square {
-  color:#4B8BF4;
+  color:@term-and-toggle;
 }
 
 .offscreen {
