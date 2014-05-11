@@ -1,6 +1,5 @@
 @import "mixins.less";
 @header-font-family: "PT Sans Narrow";
-/*@term-and-toggle: #316acc;*/
 @term-and-toggle: hsl(218, 61%, 50%);
 
 body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
@@ -120,7 +119,7 @@ code {
 }
 
 main {
-  background-color:rgba(255,255,255,.25);
+  background-color:rgba(255,255,255,.18);
 
   h2 {
     margin-bottom:5px;
@@ -157,7 +156,7 @@ a.proj-repo-link {
   outline:none;
 
   &:focus, &:hover {
-    background:lighten(@term-and-toggle,2%);
+    background:#444;
   }
 }
 
@@ -173,7 +172,7 @@ dl {
 }
 
 dt {
-  color:@term-and-toggle;
+  color:#ff4500;
   display: inline-block;
   margin-top: 5px;
   font-weight: normal;
@@ -201,7 +200,7 @@ dt {
     .border-radius(4px);
 
     .option {
-      color:@term-and-toggle;
+      color:#ff4500;
     }
   }
 
