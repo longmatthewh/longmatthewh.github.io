@@ -166,6 +166,16 @@
                         <dd>if neither <code>toggleSelector</code> nor <code>customToggle.html</code> are configured an empty element with the class <code>.at-toggle</code> will be inserted into each <code>li</code> element with a nested list&mdash;setting this to <strong>false</strong> will result in a11yTree having no knowledge of toggle elements</dd>
                     </dl>
                 </section>
+                <section>
+                    <h3>Callbacks</h3>
+                    Custom functionality can be configured to execute on expand and collapse of tree elements with children.
+                    <dl>
+                        <dt>onCollapse</dt>
+                        <dd>executed when a child list is collapsed&mdash;provides access to the parent <code>li</code> and the event that triggered the tree item to collapse</dd>
+                        <dt>onExpand</dt>
+                        <dd>executed when a child list is expanded&mdash;provides access to the parent <code>li</code> and the event that triggered the tree item to expand</dd>
+                    </dl>
+                </section>
             </section>
 
         </main>
