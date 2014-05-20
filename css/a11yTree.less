@@ -254,6 +254,7 @@ ul[role="tree"] {
     float: left;
     margin-right: 4px;
     line-height:23px;
+    color: @term-and-toggle;
   }
 
   .at-has-children {
@@ -274,7 +275,7 @@ ul[role="tree"] {
       border:none;
       outline:none;
       color:@term-and-toggle;
-      border-left:solid 1px @term-and-toggle;
+      border-left:dotted 1px #ccc;
 
       > .tree-item-label {
         border:dotted 1px @term-and-toggle;
@@ -288,9 +289,27 @@ ul[role="tree"] {
   }
 }
 
-.fa-plus-square, .fa-minus-square {
-  color:@term-and-toggle;
+#other-code-example-real {
+  li {
+    .tree-item-label {
+      padding:0 3px;
+      border: none;
+      .border-radius(2px);
+    }
+
+    &[aria-selected="true"] {
+      color: #fff;
+      border-left: dotted 1px transparent;
+
+      > .tree-item-label {
+        border: none;
+        background-color: @term-and-toggle;
+      }
+    }
+  }
 }
+
+
 
 .offscreen {
   position: absolute;
