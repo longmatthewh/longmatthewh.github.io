@@ -15,7 +15,7 @@ module.exports = function(grunt) {
             all: ['js/a11yTree.init.js']
         },
         less: {
-            production: {
+            a11yTree: {
                 options: {
                     compress: true,
                     yuicompress: true,
@@ -27,11 +27,24 @@ module.exports = function(grunt) {
                 files: {
                     "css/a11yTree.min.css": "css/a11yTree.less"
                 }
+            },
+            a11yButton: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    sourceMap: true,
+                    sourceMapFilename: 'css/a11yButton.min.css.map',
+                    sourceMapURL: '../css/a11yButton.min.css.map',
+                    sourceMapBasepath: 'css'
+                },
+                files: {
+                    "css/a11yButton.min.css": "css/a11yButton.less"
+                }
             }
         },
         watch: {
             scripts: {
-                files: ['css/a11yTree.less'],
+                files: ['css/a11yTree.less', 'css/a11yButton.less'],
                 tasks: ['less'],
                 options : {
                     spawn : false

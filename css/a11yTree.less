@@ -1,221 +1,16 @@
-@import "mixins.less";
 @header-font-family: "PT Sans Narrow";
-@term-and-toggle: hsl(218, 61%, 50%);
+@header-image: url("../img/park.jpg") no-repeat center center;
+@header-image-opacity: .15;
+@header-background: hsl(218, 61%, 50%);
+@term: hsl(218, 61%, 50%);
+@repo-link-background: darken(hsl(218, 61%, 50%),15%);
+@repo-link-background-hover: #444;
+@repo-link-color:#fff;
+@repo-link-color-hover:#fff;
 
-body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
-  margin:0;
-  padding: 0;
-  font-weight:normal;
-}
-
-h1 {
-  font-family:@header-font-family;
-  font-size: 64px;
-  line-height: 85px;
-}
-
-h3 {
-  margin-top: 10px;
-  margin-bottom: 3px;
-  font-weight:bold;
-  font-size:24px;
-}
-
-ul {
-  margin-top:0;
-  margin-bottom: 0;
-}
-
-header > p {
-  font-size:24px;
-  line-height:26px;
-}
-
-section p {
-  padding: 10px 20px;
-
-}
-
-body {
-  font-family:"PT Sans";
-  font-size: 18px;
-  line-height:22px;
-  background-image: url('../img/ps_neutral.png');
-
-  > header, > footer {
-    background-color: @term-and-toggle;
-    color: #fff;
-    .opacity(.95);
-    position: relative;
-  }
-
-  > header {
-    padding: 0 120px 0;
-
-    &:before {
-      background: url("../img/park.jpg") no-repeat center center;
-      background-size:cover;
-      bottom: 0;
-      content: "";
-      display: block;
-      left: 0;
-      .opacity(.15);
-      position: absolute;
-      right: 0;
-      top: 0;
-      z-index: -1;
-    }
-  }
-
-  > footer {
-    margin-top:20px;
-    padding: 20px 120px;
-
-    .clearfix();
-
-    .horizontal-list();
-
-    h2, ul{
-      float:left;
-      font-size:18px;
-    }
-
-    ul {
-      margin-left:10px;
-    }
-
-    li {
-      margin-left:5px;
-    }
-
-    a {
-      color:#fff;
-      border-bottom:solid 1px transparent;
-
-      &:focus, &:hover {
-        outline:none;
-        background-color:transparent;
-        border-bottom:solid 1px #fff;
-      }
-    }
-  }
-}
-
-a {
-  color: #0000ff;
-  text-decoration: underline;
-
-  &:focus, &:hover {
-    outline:#0000ff dotted 1px;
-    background-color:#fff;
-  }
-}
-
-code {
-  background:#efefef;
-  padding: 0 1px;
-  border: solid 1px #ddd;
-  .border-radius(4px);
-}
-
-main {
-  background-color:rgba(255,255,255,.18);
-
-  h2 {
-    margin-bottom:5px;
-    color:darken(@term-and-toggle,15%);
-    background-color:darken(hsla(218, 61%, 50%,.08),20%);
-    font-family:@header-font-family;
-    font-size: 36px;
-    padding: 4px 10px;
-    line-height:38px;
-    .border-radiuses(0, 5px, 5px, 0);
-  }
-
-  > section {
-    padding: 0 120px;
-    margin-top: 20px;
-
-    &:first-child {
-      margin-top:0;
-    }
-  }
-}
-
-a.proj-repo-link {
-  font-family:@header-font-family;
-  background:darken(@term-and-toggle,15%);
-  color:#fff;
-  font-size:36px;
-  line-height:38px;
-  padding: 4px 10px;
-  text-decoration: none;
-  margin-top:10px;
-  display: inline-block;
-  .border-radiuses(5px, 0, 0, 5px);
-  outline:none;
-
-  &:focus, &:hover {
-    background:#444;
-  }
-}
-
-#config-options section {
-  padding:0;
-}
-
-dl {
-  padding-left:15px;
-  border-left:dotted 1px #ccc;
-  margin-top:10px;
-  margin-bottom:15px;
-}
-
-dt {
-  color:#ff4500;
-  display: inline-block;
-  margin-top: 5px;
-  font-weight: normal;
-
-  &:first-child {
-    margin-top:0;
-  }
-}
-
-#idea dt {
-  color:inherit;
-}
-
-.code-example {
-  margin-top:10px;
-  margin-bottom: 10px;
-  background: #efefef;
-  max-width: 500px;
-  padding:10px 10px;
-
-  code {
-    background:none;
-    padding: 0;
-    border: none;
-    .border-radius(4px);
-
-    .option {
-      color:#ff4500;
-    }
-  }
-
-  h3 {
-    margin-top:0;
-  }
-
-  > ul {
-    margin-top:12px;
-  }
-}
-
-#code-example-real {
-  margin-top: 5px;
-}
+@import "mixins.less";
+@import "common.less";
+@import "project.less";
 
 #simple-list-example {
   i.fa {
@@ -260,7 +55,7 @@ ul[role="tree"] {
     float: left;
     margin-right: 4px;
     line-height:23px;
-    color: @term-and-toggle;
+    color: @term;
   }
 
   .at-has-children {
@@ -280,11 +75,11 @@ ul[role="tree"] {
     &[aria-selected="true"] {
       border:none;
       outline:none;
-      color:@term-and-toggle;
+      color:@term;
       border-left:dotted 1px #ccc;
 
       > .tree-item-label {
-        border:dotted 1px @term-and-toggle;
+        border:dotted 1px @term;
         background-color: #fff;
       }
 
@@ -309,82 +104,41 @@ ul[role="tree"] {
 
       > .tree-item-label {
         border: none;
-        background-color: @term-and-toggle;
+        background-color: @term;
       }
     }
   }
 }
 
-.offscreen {
-  position: absolute;
-  height: 1px;
-  width: 1px;
-  clip: rect(1px 1px 1px 1px);
-  clip: rect(1px,1px,1px,1px);
-  overflow: hidden!important;
-}
+.code-example {
+  margin-top:10px;
+  margin-bottom: 10px;
+  background: #efefef;
+  max-width: 500px;
+  padding:10px 10px;
 
-@media ( max-width : 1025px) {
-  body > header, main > section, body > footer {
-    padding-left:80px;
-    padding-right:80px;
+  code {
+    background:none;
+    padding: 0;
+    border: none;
+    .border-radius(4px);
+
+    .option {
+      color:#ff4500;
+    }
+  }
+
+  h3 {
+    margin-top:0;
+  }
+
+  > ul {
+    margin-top:12px;
   }
 }
 
-@media ( max-width : 769px) {
-  body > header, main > section, body > footer {
-    padding-left:20px;
-    padding-right:20px;
-  }
-
-  section {
-    padding-top:0;
-  }
-
-  a.proj-repo-link {
-    margin-left:0;
-  }
-
-  main h2, a.proj-repo-link {
-    .border-radiuses(0, 0, 5px, 0);
-    font-size:36px;
-    line-height:38px;
-    margin-right:-20px;
-    padding-left:10px;
-    padding-right:30px;
-  }
+#code-example-real {
+  margin-top: 5px;
 }
 
-@media ( max-width : 485px) {
-  header > p {
-    font-size:22px;
-  }
-}
-
-@media ( max-width : 415px) {
-  h1 {
-    font-size: 60px;
-    line-height:75px;
-  }
-
-  main h2 {
-    font-size: 32px;
-  }
-}
-
-@media ( max-width : 415px) {
-  h1 {
-    font-size: 52px;
-    line-height:65px;
-  }
-
-  header > p {
-    font-size:20px;
-    line-height:24px;
-  }
-
-  main h2, a.proj-repo-link {
-    font-size:32px;
-    line-height:35px;
-  }
-}
+@import "projectResponsive.less";

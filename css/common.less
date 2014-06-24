@@ -1,0 +1,42 @@
+body, header, main, h1, h2, h3, p, dl, dt, dd, pre, code {
+  margin:0;
+  padding: 0;
+  font-weight:normal;
+}
+
+h1 {
+  font-family:@header-font-family;
+  font-size: 64px;
+  line-height: 85px;
+}
+
+h3 {
+  margin-top: 10px;
+  margin-bottom: 3px;
+  font-weight:bold;
+  font-size:24px;
+}
+
+ul {
+  margin-top:0;
+  margin-bottom: 0;
+}
+
+header > p {
+  font-size:24px;
+  line-height:26px;
+}
+
+section p {
+  padding: 10px 20px;
+
+}
+
+.offscreen {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  clip: rect(1px 1px 1px 1px);
+  clip: rect(1px,1px,1px,1px);
+  overflow: hidden!important;
+}

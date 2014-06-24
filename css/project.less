@@ -1,0 +1,154 @@
+
+body {
+  font-family:"PT Sans";
+  font-size: 18px;
+  line-height:22px;
+  background-image: url('../img/ps_neutral.png');
+
+  > header, > footer {
+    background-color: @header-background;
+    color: #fff;
+    .opacity(.95);
+    position: relative;
+  }
+
+  > header {
+    padding: 0 120px 0;
+
+    &:before {
+      background: @header-image;
+      background-size:cover;
+      bottom: 0;
+      content: "";
+      display: block;
+      left: 0;
+      .opacity(@header-image-opacity);
+      position: absolute;
+      right: 0;
+      top: 0;
+      z-index: -1;
+    }
+  }
+
+  > footer {
+    margin-top:20px;
+    padding: 20px 120px;
+
+    .clearfix();
+
+    .horizontal-list();
+
+    h2, ul{
+      float:left;
+      font-size:18px;
+    }
+
+    ul {
+      margin-left:10px;
+    }
+
+    li {
+      margin-left:5px;
+    }
+
+    a {
+      color:#fff;
+      border-bottom:solid 1px transparent;
+
+      &:focus, &:hover {
+        outline:none;
+        background-color:transparent;
+        border-bottom:solid 1px #fff;
+      }
+    }
+  }
+}
+
+a {
+  color: #0000ff;
+  text-decoration: underline;
+
+  &:focus, &:hover {
+    outline:#0000ff dotted 1px;
+    background-color:#fff;
+  }
+}
+
+code {
+  background:#efefef;
+  padding: 0 1px;
+  border: solid 1px #ddd;
+  .border-radius(4px);
+}
+
+main {
+  background-color:rgba(255,255,255,.18);
+
+  h2 {
+    margin-bottom:5px;
+    color:darken(@term,15%);
+    background-color:darken(hsla(218, 61%, 50%,.08),20%);
+    font-family:@header-font-family;
+    font-size: 36px;
+    padding: 4px 10px;
+    line-height:38px;
+    .border-radiuses(0, 5px, 5px, 0);
+  }
+
+  > section {
+    padding: 0 120px;
+    margin-top: 20px;
+
+    &:first-child {
+      margin-top:0;
+    }
+  }
+}
+a.proj-repo-link {
+  font-family:@header-font-family;
+  background:@repo-link-background;
+  color:@repo-link-color;
+  font-size:36px;
+  line-height:38px;
+  padding: 4px 10px;
+  text-decoration: none;
+  margin-top:10px;
+  display: inline-block;
+  .border-radiuses(5px, 0, 0, 5px);
+  outline:none;
+
+  &:focus, &:hover {
+    background:@repo-link-background-hover;
+    color:@repo-link-color-hover;
+  }
+}
+
+#config-options section {
+  padding:0;
+}
+
+section ul {
+  margin-top:5px;
+}
+
+dl {
+  padding-left:15px;
+  border-left:dotted 1px #ccc;
+  margin-top:10px;
+  margin-bottom:15px;
+}
+
+dt {
+  color:#ff4500;
+  display: inline-block;
+  margin-top: 5px;
+  font-weight: normal;
+
+  &:first-child {
+    margin-top:0;
+  }
+}
+
+#idea dt {
+  color:inherit;
+}
