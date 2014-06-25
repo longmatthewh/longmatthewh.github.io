@@ -29,7 +29,7 @@
         <main>
             <section>
                 <h2><i class="fa fa-lightbulb-o"></i> The Idea</h2>
-                &lt;div&gt;, &lt;span&gt;, and &lt;a&gt; elements are commonly misused as buttons. Why is this a problem&mdash;why is this wrong?
+                &lt;div&gt;, &lt;span&gt;, and &lt;a&gt; elements are commonly misused as buttons. Why is this a problem? Why is this wrong?
                 <h3>Accessibility Issues</h3>
                 Using the wrong HTML elements typically results in accessibility issues. Here are a couple reasons why using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements will negatively impact accessibility when used in place of semantic elements:
                 <ul>
@@ -56,7 +56,7 @@
             </section>
             <section>
                 <h2><i class="fa fa-magic"></i> a11yButton Magic</h2>
-                It's actually not magic&mdash;a11yButton ensures your non-button elements completely behave like a buttons. Here's what it does:
+                It's actually not magic&mdash;a11yButton ensures your non-button elements behave more like a buttons. Here's what it does:
                 <dl>
                     <dt>tabindex=0</dt>
                     <dd>
@@ -74,10 +74,16 @@
             </section>
             <section>
                 <h2><i class="fa fa-code"></i> Using a11yButton</h2>
-                Assuming you starting with something like these "buttons":
+                Assuming you starting with something like the "buttons" below. You can't use the keyboard to navigate/use them, and screen readers don't interpret the buttons like buttons&mdash;just plain text.
                 <span class="button">I'm a span...click me!</span>
                 <div class="button">I'm a div...click me!</div>
-                You can't use the keyboard to navigate/use them. Screen readers don't interpret the buttons like buttons&mdash;just plain text. The buttons below have a11yButton applied to them; use the keyboard and a screen reader to see how they're interpreted differently.
+                Now apply a11yButton elements similar to those above.
+                <div class="code-example">
+                    <code>
+                        $('.good-button').a11yButton();
+                    </code>
+                </div>
+                Now you're able to use the keyboard to access these buttons and most assistive technologies like screen readers will interpret them as buttons.
                 <span class="button good-button">I'm a span...click me!</span>
                 <div class="button good-button">I'm a div...click me!</div>
             </section>
