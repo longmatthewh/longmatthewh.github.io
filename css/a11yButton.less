@@ -8,9 +8,23 @@
 @repo-link-color:#fff;
 @repo-link-color-hover:#fff;
 
-
 @import "mixins.less";
 @import "common.less";
 @import "project.less";
+
+.button {
+  display:block;
+  padding:5px;
+  .border-radius(5px);
+  background-color: @repo-link-background;
+  color:#fff;
+  margin:10px 0;
+  width:170px;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    background-color: @repo-link-background-hover;
+  }
+}
 
 @import "projectResponsive.less";

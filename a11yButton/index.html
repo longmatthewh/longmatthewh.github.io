@@ -16,14 +16,14 @@
                     m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
             })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-            ga('create', 'UA-50123482-1', 'longmatthewh.github.io');
+            ga('create', 'UA-50123482-1');
             ga('send', 'pageview');
         </script>
     </head>
     <body>
         <header>
             <h1>jquery.a11yButton</h1>
-            <p>Use this plugin only when you have to&mdash;when you're not using a <em>button</em> when you should be using a <em>button</em>.</p>
+            <p>Use this plugin only when you have to&mdash;when you're not using a <em>button</em> when you should be using a <em>button</em>. It's extremely basic and lightweight.</p>
             <a href="https://github.com/longmatthewh/jquery-a11yButton" class="proj-repo-link"><i class="fa fa-github-square"></i> GitHub Project</a>
         </header>
         <main>
@@ -31,14 +31,14 @@
                 <h2><i class="fa fa-lightbulb-o"></i> The Idea</h2>
                 &lt;div&gt;, &lt;span&gt;, and &lt;a&gt; elements are commonly misused as buttons. Why is this a problem&mdash;why is this wrong?
                 <h3>Accessibility Issues</h3>
-                Using the wrong HTML elements typically results in accessibility issues. Here are a couple reasons why using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements will negatively impact accessibility:
+                Using the wrong HTML elements typically results in accessibility issues. Here are a couple reasons why using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements will negatively impact accessibility when used in place of semantic elements:
                 <ul>
                     <li>They aren't interpreted by assistive technologies any differently than plain text.</li>
                     <li>They aren't inherently keyboard accessible. <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements aren't tabable by default, and will require a keyboard-specific event to behave the same way as the click event.</li>
                 </ul>
 
                 <h3>Bad HTML Semantics</h3>
-                Here's what the <a href="http://www.w3.org/">W3C</a> says about the <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements:
+                Here's what the <a href="http://www.w3.org/">W3C</a> says about the <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, and <code>&lt;a&gt;</code> elements:
                 <dl>
                     <dt>div</dt>
                     <dd>
@@ -50,15 +50,37 @@
                     </dd>
                     <dt>a (anchor)</dt>
                     <dd>
-                        <code>&lt;a&gt;</code> elements are interpreted differently than plain text by assistive technologies. They're also in the tab order by default, right? Actually, the <code>&lt;a&gt;</code> element is only in the tab order if its got an <code>href</code> value. "If the a element has an href attribute, then it represents a hyperlink (a hypertext anchor) labeled by its contents...[hyperlinks] are links to other resources..."
+                        I can use them for buttons, right? No. <code>&lt;a&gt;</code> elements are interpreted differently than plain text by assistive technologies. However, they're only in the tab order if it's got an <code>href</code> value. "If the a element has an href attribute, then it represents a hyperlink (a hypertext anchor) labeled by its contents...[hyperlinks] are links to other resources..."
                     </dd>
                 </dl>
-
-
             </section>
-            <!--section>
+            <section>
+                <h2><i class="fa fa-magic"></i> a11yButton Magic</h2>
+                It's actually not magic&mdash;a11yButton ensures your non-button elements completely behave like a buttons. Here's what it does:
+                <dl>
+                    <dt>tabindex=0</dt>
+                    <dd>
+                        this attribute is set to 0, so the element is placed in the natural tab order
+                    </dd>
+                    <dt>role=button</dt>
+                    <dd>
+                        WAI-ARIA attribute applied to the element to identify it as a button to assistive technologies
+                    </dd>
+                    <dt>keypress</dt>
+                    <dd>
+                        event attached to the enter key (key 13), which will trigger the element's 'click' handler
+                    </dd>
+                </dl>
+            </section>
+            <section>
                 <h2><i class="fa fa-code"></i> Using a11yButton</h2>
-            </section-->
+                Assuming you starting with something like these "buttons":
+                <span class="button">I'm a span...click me!</span>
+                <div class="button">I'm a div...click me!</div>
+                You can't use the keyboard to navigate/use them. Screen readers don't interpret the buttons like buttons&mdash;just plain text. The buttons below have a11yButton applied to them; use the keyboard and a screen reader to see how they're interpreted differently.
+                <span class="button good-button">I'm a span...click me!</span>
+                <div class="button good-button">I'm a div...click me!</div>
+            </section>
         </main>
         <footer>
                 <h2>Contact Matt Long</h2>
@@ -92,5 +114,12 @@
 
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
         <script src="../js/jquery.a11yButton.min.js"></script>
+        <script>
+            $('.button').click(function() {
+                alert('I am a ' + $(this).prop('tagName') + ' button...really!');
+            });
+
+            $('.good-button').a11yButton();
+        </script>
     </body>
 </html>
