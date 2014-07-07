@@ -14,6 +14,7 @@
         <link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
         <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
         <link href="../css/a11yTree.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
         <script src="../js/lib/modernizr.custom.66106.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -125,21 +126,17 @@
                     </ul>
                 </div>
                 Now apply a11yTree to the parent unordered list <code>ul</code> element.
-                <div class="code-example">
-                    <code>
-                        $('#code-example-real > ul').a11yTree({
-                        <br>&nbsp;<span class="option">treeLabelId</span>:'tree-label',
-                        <br>&nbsp;<span class="option">toggleSelector</span>:'i.fa',
-                        <br>&nbsp;<span class="option">treeItemLabelSelector</span>:'.tree-item-label',
-                        <br>&nbsp;<span class="option">onCollapse</span>:function($item) {
-                        <br>&nbsp;&nbsp;customCollapse($item);
-                        <br>&nbsp;},
-                        <br>&nbsp;<span class="option">onExpand</span>:function($item) {
-                        <br>&nbsp;&nbsp;customExpand($item);
-                        <br>&nbsp;}
-                        <br>});
-                    </code>
-                </div>
+<pre class="code-example"><code class="js">$('#code-example-real > ul').a11yTree({
+    <span class="option">treeLabelId</span>:'tree-label',
+    <span class="option">toggleSelector</span>:'i.fa',
+    <span class="option">treeItemLabelSelector</span>:'.tree-item-label',
+    <span class="option">onCollapse</span>:function($item) {
+        customCollapse($item);
+    },
+    <span class="option">onExpand</span>:function($item) {
+        customExpand($item);
+    }
+});</code></pre>
                 And you get this:
                 <div id="code-example-real" class="font-awesome-tree"></div>
                 <div id="other-code-example-real" class="font-awesome-tree">
@@ -269,6 +266,8 @@
                 </ul>
         </footer>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <script src="../js/jquery.a11yTree.min.js"></script>
         <script src="../js/a11yTree.init.min.js"></script>
     </body>

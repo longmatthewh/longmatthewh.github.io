@@ -3,11 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>a11yButton jQuery plugin</title>
+        <title>isKey jQuery plugin</title>
         <meta name="description" content="A lightweight utility function for determining which key triggered a jQuery event.">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link href='http://fonts.googleapis.com/css?family=PT+Sans|PT+Sans+Narrow' rel='stylesheet' type='text/css'>
         <link href="../font-awesome/css/font-awesome.min.css" rel="stylesheet">
+        <link href="../css/isKey.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="http://yandex.st/highlightjs/8.0/styles/default.min.css">
         <script src="../js/lib/modernizr.custom.66106.js"></script>
         <script>
             (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -22,71 +24,79 @@
     <body>
         <header>
             <h1>jquery.isKey</h1>
-            <p>A lightweight utility function for determining which key triggered a jQuery event.</p>
+            <p>Add life to the keyboard, because not everyone uses a mouse. Here's a set of lightweight utility functions used for determining which key triggered a jQuery event.</p>
             <a href="https://github.com/longmatthewh/jquery-isKey" class="proj-repo-link"><i class="fa fa-github-square"></i> GitHub Project</a>
         </header>
-        <!--main>
+        <main>
             <section>
                 <h2><i class="fa fa-lightbulb-o"></i> The Idea</h2>
-                &lt;div&gt;, &lt;span&gt;, and &lt;a&gt; elements are commonly misused as buttons. Why is this a problem? Why is this wrong?
-                <h3>Accessibility Issues</h3>
-                Using the wrong HTML elements typically results in accessibility issues. Here are a couple reasons why using <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements will negatively impact accessibility when used in place of semantic elements:
+                Making sure the web isn't <em>only</em> accessible using the mouse is a critical aspect of universal web accessibility&mdash;expected and intuitive keyboard navigation is a must.
+                HTML provides standard keyboard interaction for elements like <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, and <code>&lt;input&gt;</code>. However, sometimes there are
+                there are circumstances which require you to develop around the keyboard:
                 <ul>
-                    <li>They aren't interpreted by assistive technologies any differently than plain text.</li>
-                    <li>They aren't inherently keyboard accessible. <code>&lt;div&gt;</code> and <code>&lt;span&gt;</code> elements aren't tabable by default, and will require a keyboard-specific event to behave the same way as the click event.</li>
+                    <li>non-semantic elements like <code>&lt;div&gt;</code> or <code>&lt;span&gt;</code> are used for things like buttons</li>
+                    <li>you're building more complex navigation for widgets, like a tree or a map</li>
+                    <li>whatever else you need to do based on common keyboard interactions</li>
                 </ul>
-
-                <h3>Bad HTML Semantics</h3>
-                Here's what the <a href="http://www.w3.org/">W3C</a> says about the <code>&lt;div&gt;</code>, <code>&lt;span&gt;</code>, and <code>&lt;a&gt;</code> elements:
-                <dl>
-                    <dt>div</dt>
-                    <dd>
-                        "...has no special meaning at all…authors are strongly encouraged to view the <code>&lt;div&gt;</code> element as an element of last resort…use of more appropriate elements…leads to better accessibility for readers and easier maintainability for authors."
-                    </dd>
-                    <dt>span</dt>
-                    <dd>
-                        "The <code>&lt;span&gt;</code> element doesn't mean anything on its own..."
-                    </dd>
-                    <dt>a (anchor)</dt>
-                    <dd>
-                        I can use them for buttons, right? No. <code>&lt;a&gt;</code> elements are interpreted differently than plain text by assistive technologies. However, they're only in the tab order if it's got an <code>href</code> value. "If the a element has an href attribute, then it represents a hyperlink (a hypertext anchor) labeled by its contents...[hyperlinks] are links to other resources..."
-                    </dd>
-                </dl>
             </section>
             <section>
-                <h2><i class="fa fa-magic"></i> a11yButton Magic</h2>
-                It's actually not magic&mdash;a11yButton ensures your non-button elements behave more like a buttons. Here's what it does:
-                <dl>
-                    <dt>tabindex=0</dt>
-                    <dd>
-                        this attribute is set to 0, so the element is placed in the natural tab order
-                    </dd>
-                    <dt>role=button</dt>
-                    <dd>
-                        WAI-ARIA attribute applied to the element to identify it as a button to assistive technologies
-                    </dd>
-                    <dt>keypress</dt>
-                    <dd>
-                        event attached to the enter key (key 13), which will trigger the element's 'click' handler
-                    </dd>
-                </dl>
+                <h2><i class="fa fa-keyboard-o"></i> The Keys</h2>
+                I decided to to write these utility functions, because I found myself copying the same code from project to project:
+                <table id="functions">
+                    <tr>
+                        <th scope="col">function name</th>
+                        <th scope="col">returns <em>true</em> for e.which</th>
+                    </tr>
+                    <tr>
+                        <th scope="row">isEnterKey</th>
+                        <td>13</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">isDownArrowKey</th>
+                        <td>40</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">isUpArrowKey</th>
+                        <td>38</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">isRightArrowKey</th>
+                        <td>39</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">isLeftArrowKey</th>
+                        <td>37</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">isEndKey</th>
+                        <td>35</td>
+                    </tr>
+                    <tr>
+                        <th scope="row">isHomeKey</th>
+                        <td>36</td>
+                    </tr>
+                </table>
             </section>
             <section>
-                <h2><i class="fa fa-code"></i> Using a11yButton</h2>
-                Assuming you starting with something like the "buttons" below. You can't use the keyboard to navigate/use them, and screen readers don't interpret the buttons like buttons&mdash;just plain text.
-                <span class="button">I'm a span...click me!</span>
-                <div class="button">I'm a div...click me!</div>
-                Now apply a11yButton elements similar to those above.
-                <div class="code-example">
-                    <code>
-                        $('.good-button').a11yButton();
-                    </code>
-                </div>
-                Now you're able to use the keyboard to access these buttons and most assistive technologies like screen readers will interpret them as buttons.
-                <span class="button good-button">I'm a span...click me!</span>
-                <div class="button good-button">I'm a div...click me!</div>
+                <h2><i class="fa fa-code"></i> Using isKey</h2>
+                The following example is a code snippet from a <a href="http://codepen.io/longmatthewh/pen/EvBfn">Google Maps CodePen</a> that uses $.isKey functions to make Google Maps API keyboard accessible. Simply pass the jQuery event into any of the functions.
+<pre class="code-example"><code class="js">$map.on('keydown',function(event) {
+    if ($.isDownArrowKey(event)) {
+        $panDown.click();
+        return false;
+    } else if ($.isUpArrowKey(event)) {
+        $panUp.click();
+        return false;
+    } else if ($.isLeftArrowKey(event)) {
+        $panLeft.click();
+        return false;
+    } else if ($.isRightArrowKey(event)) {
+        $panRight.click();
+        return false;
+    }
+});</code></pre>
             </section>
-        </main-->
+        </main>
         <footer>
                 <h2>Contact Matt Long</h2>
                 <ul>
@@ -116,15 +126,8 @@
                     </li>
                 </ul>
         </footer>
-
+        <script src="http://yandex.st/highlightjs/8.0/highlight.min.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
         <script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-        <script src="../js/jquery.a11yButton.min.js"></script>
-        <script>
-            $('.button').click(function() {
-                alert('I am a ' + $(this).prop('tagName') + ' button...really!');
-            });
-
-            $('.good-button').a11yButton();
-        </script>
     </body>
 </html>

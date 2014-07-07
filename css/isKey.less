@@ -1,0 +1,49 @@
+@header-font-family: "PT Sans Narrow";
+@header-image: url("../img/keyboard.jpg") no-repeat center center;
+@header-image-opacity: .25;
+@header-background: #444;
+@term: hsl(218, 61%, 50%);
+@repo-link-background: darken(hsl(218, 61%, 50%),15%);
+@repo-link-background-hover: #222;
+@repo-link-color:#fff;
+@repo-link-color-hover:#fff;
+
+@import "mixins.less";
+@import "common.less";
+@import "project.less";
+
+.button {
+  display:block;
+  padding:5px;
+  .border-radius(5px);
+  background-color: @repo-link-background;
+  color:#fff;
+  margin:10px 0;
+  width:170px;
+  cursor: pointer;
+
+  &:hover, &:focus {
+    background-color: @repo-link-background-hover;
+  }
+}
+
+#functions {
+  margin-top: 15px;
+
+  td, th {
+    padding:4px 8px;
+    text-align: left;
+  }
+
+  th[scope="col"] {
+    color:#444;
+    border:solid 1px darken(hsla(218, 61%, 50%,.08),20%);
+  }
+
+  th[scope="row"] {
+    color:#ff4500;
+    font-weight: normal;
+  }
+}
+
+@import "projectResponsive.less";

@@ -40,11 +40,37 @@ module.exports = function(grunt) {
                 files: {
                     "css/a11yButton.min.css": "css/a11yButton.less"
                 }
+            },
+            isKey: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    sourceMap: true,
+                    sourceMapFilename: 'css/isKey.min.css.map',
+                    sourceMapURL: '../css/isKey.min.css.map',
+                    sourceMapBasepath: 'css'
+                },
+                files: {
+                    "css/isKey.min.css": "css/isKey.less"
+                }
+            },
+            longmatthewh: {
+                options: {
+                    compress: true,
+                    yuicompress: true,
+                    sourceMap: true,
+                    sourceMapFilename: 'css/longmatthewh.min.css.map',
+                    sourceMapURL: '../css/longmatthewh.min.css.map',
+                    sourceMapBasepath: 'css'
+                },
+                files: {
+                    "css/longmatthewh.min.css": "css/longmatthewh.less"
+                }
             }
         },
         watch: {
             scripts: {
-                files: ['css/a11yTree.less', 'css/a11yButton.less'],
+                files: ['css/a11yTree.less', 'css/a11yButton.less', 'css/isKey.less', 'css/longmatthewh.less'],
                 tasks: ['less'],
                 options : {
                     spawn : false
