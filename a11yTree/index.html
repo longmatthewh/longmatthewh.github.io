@@ -126,17 +126,17 @@
                     </ul>
                 </div>
                 Now apply a11yTree to the parent unordered list <code>ul</code> element.
-<pre class="code-example"><code class="js">$('#code-example-real > ul').a11yTree({
-    <span class="option">treeLabelId</span>:'tree-label',
-    <span class="option">toggleSelector</span>:'i.fa',
-    <span class="option">treeItemLabelSelector</span>:'.tree-item-label',
-    <span class="option">onCollapse</span>:function($item) {
-        customCollapse($item);
-    },
-    <span class="option">onExpand</span>:function($item) {
-        customExpand($item);
-    }
-});</code></pre>
+                <pre class="code-example"><code class="js">$('#code-example-real > ul').a11yTree({
+                    &nbsp;<span class="option">treeLabelId</span>:'tree-label',
+                    &nbsp;<span class="option">toggleSelector</span>:'i.fa',
+                    &nbsp;<span class="option">treeItemLabelSelector</span>:'.tree-item-label',
+                    &nbsp;<span class="option">onCollapse</span>:function($item) {
+                    &nbsp;&nbsp;customCollapse($item);
+                    &nbsp;},
+                    &nbsp;<span class="option">onExpand</span>:function($item) {
+                    &nbsp;&nbsp;customExpand($item);
+                    &nbsp;}
+                });</code></pre>
                 And you get this:
                 <div id="code-example-real" class="font-awesome-tree"></div>
                 <div id="other-code-example-real" class="font-awesome-tree">

@@ -80,21 +80,21 @@
             <section>
                 <h2><i class="fa fa-code"></i> Using isKey</h2>
                 The following example is a code snippet from a <a href="http://codepen.io/longmatthewh/pen/EvBfn">Google Maps CodePen</a> that uses $.isKey functions to make Google Maps API keyboard accessible. Simply pass the jQuery event into any of the functions.
-<pre class="code-example"><code class="js">$map.on('keydown',function(event) {
-    if ($.isDownArrowKey(event)) {
-        $panDown.click();
-        return false;
-    } else if ($.isUpArrowKey(event)) {
-        $panUp.click();
-        return false;
-    } else if ($.isLeftArrowKey(event)) {
-        $panLeft.click();
-        return false;
-    } else if ($.isRightArrowKey(event)) {
-        $panRight.click();
-        return false;
-    }
-});</code></pre>
+                <pre class="code-example"><code class="js">$map.on('keydown', function(evt) {
+                &nbsp;if ($.isDownArrowKey(evt)) {
+                &nbsp;&nbsp;$panDown.click();
+                &nbsp;&nbsp;return false;
+                &nbsp;} else if ($.isUpArrowKey(evt)) {
+                &nbsp;&nbsp;$panUp.click();
+                &nbsp;&nbsp;return false;
+                &nbsp;} else if ($.isLeftArrowKey(evt)) {
+                &nbsp;&nbsp;$panLeft.click();
+                &nbsp;&nbsp;return false;
+                &nbsp;} else if ($.isRightArrowKey(evt)) {
+                &nbsp;&nbsp;$panRight.click();
+                &nbsp;&nbsp;return false;
+                &nbsp;}
+                });</code></pre>
             </section>
         </main>
         <footer>
