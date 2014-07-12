@@ -3,19 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="5a0a57cf-0bc0-467c-9178-7fb110765876" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/a11yTree.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/img/awesome.jpg" afterPath="$PROJECT_DIR$/img/awesome.jpg" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yButton.min.css.map" afterPath="$PROJECT_DIR$/css/a11yButton.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yButton.min.css" afterPath="$PROJECT_DIR$/css/a11yButton.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yTree.min.css.map" afterPath="$PROJECT_DIR$/css/a11yTree.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yTree.min.css" afterPath="$PROJECT_DIR$/css/a11yTree.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/isKey.min.css.map" afterPath="$PROJECT_DIR$/css/isKey.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/isKey.min.css" afterPath="$PROJECT_DIR$/css/isKey.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/longmatthewh.less" afterPath="$PROJECT_DIR$/css/longmatthewh.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/longmatthewh.min.css.map" afterPath="$PROJECT_DIR$/css/longmatthewh.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/longmatthewh.min.css" afterPath="$PROJECT_DIR$/css/longmatthewh.min.css" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/project.less" afterPath="$PROJECT_DIR$/css/project.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="longmatthewh.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -52,11 +40,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="project.less" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="project.less" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/css/project.less">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.6734693" vertical-offset="1155" max-vertical-offset="2805">
-              <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="57" />
+            <state vertical-scroll-proportion="0.68829113" vertical-offset="60" max-vertical-offset="2790">
+              <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -102,10 +90,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="index.html" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="index.html" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/index.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.74378884" vertical-offset="361" max-vertical-offset="1515">
+            <state vertical-scroll-proportion="-19.333334" vertical-offset="376" max-vertical-offset="1515">
               <caret line="56" column="222" selection-start-line="56" selection-start-column="222" selection-end-line="56" selection-end-column="222" />
               <folding>
                 <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
@@ -176,9 +164,9 @@
         <option value="$PROJECT_DIR$/isKey/index.html" />
         <option value="$PROJECT_DIR$/a11yTree/index.html" />
         <option value="$PROJECT_DIR$/css/isKey.less" />
-        <option value="$PROJECT_DIR$/css/project.less" />
         <option value="$PROJECT_DIR$/css/longmatthewh.less" />
         <option value="$PROJECT_DIR$/index.html" />
+        <option value="$PROJECT_DIR$/css/project.less" />
       </list>
     </option>
   </component>
@@ -840,14 +828,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/css/project.less">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.6734693" vertical-offset="1155" max-vertical-offset="2805">
-          <caret line="89" column="4" selection-start-line="89" selection-start-column="4" selection-end-line="89" selection-end-column="57" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/css/longmatthewh.less">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.28" vertical-offset="759" max-vertical-offset="1455">
@@ -870,13 +850,21 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/index.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.74378884" vertical-offset="361" max-vertical-offset="1515">
+        <state vertical-scroll-proportion="-19.333334" vertical-offset="376" max-vertical-offset="1515">
           <caret line="56" column="222" selection-start-line="56" selection-start-column="222" selection-end-line="56" selection-end-column="222" />
           <folding>
             <element signature="n#style#0;n#a#0;n#li#1;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#2;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
             <element signature="n#style#0;n#a#0;n#li#3;n#ul#0;n#footer#0;n#body#0;n#html#0;n#!!top" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/css/project.less">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.68829113" vertical-offset="60" max-vertical-offset="2790">
+          <caret line="33" column="0" selection-start-line="33" selection-start-column="0" selection-end-line="33" selection-end-column="0" />
+          <folding />
         </state>
       </provider>
     </entry>
