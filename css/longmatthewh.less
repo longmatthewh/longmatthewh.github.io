@@ -13,34 +13,22 @@
 @import "project.less";
 
 #projects {
-
-  h3 {
-    background:none;
-    padding: 0 7px;
-    text-align: left;
-    z-index: 2;
-    font-weight:normal;
-    font-size:30px;
-    margin:0 0 10px 0;
-    color:#58442e;
-  }
-
   .floating-list();
 
   ul {
     width: 100%;
     clear:both;
-    margin: 15px 0;
+    margin: 0 0 15px 0;
     .clearfix();
   }
 
   li {
     height:140px;
-    margin:12px 0;
+    margin:0 0 20px 0;
     width:49.5%;
 
     p {
-      padding:0 7px 15px 7px;
+      padding:0 0 10px 0;
     }
 
     &:nth-child(2n+1) {
@@ -53,8 +41,12 @@
 
     a.project-page {
       color:#234b90;
-      display:block;
-      margin-top:10px;
+      display:inline-block;
+
+      i {
+        display:inline-block;
+        margin-left: 5px;
+      }
     }
   }
 }

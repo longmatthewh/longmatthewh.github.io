@@ -2,6 +2,13 @@ module.exports = function(grunt) {
 
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
+        bake: {
+            your_target: {
+                files: {
+                    "index.html" : "index-bake.html"
+                }
+            }
+        },
         uglify: {
             options: {
                 banner: '/*! <%= pkg.name %> */\n'
@@ -70,12 +77,18 @@ module.exports = function(grunt) {
         },
         watch: {
             scripts: {
-                files: ['css/a11yTree.less', 'css/a11yButton.less', 'css/isKey.less', 'css/longmatthewh.less'],
+                files: ['css/*.less'],
                 tasks: ['less'],
                 options : {
                     spawn : false
                 }
-
+            },
+            html: {
+                files: ['index-bake.html'],
+                tasks: ['bake'],
+                options : {
+                    spawn : false
+                }
             }
         }
     });
@@ -83,5 +96,6 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-uglify');
     grunt.loadNpmTasks('grunt-contrib-watch');
     grunt.loadNpmTasks('grunt-contrib-less');
-    grunt.registerTask('default', ['less','jshint','uglify']);
+    grunt.loadNpmTasks("grunt-bake");
+    grunt.registerTask('default', ['less','jshint','uglify','bake']);
 };

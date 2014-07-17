@@ -4,10 +4,22 @@
     padding-left:80px;
     padding-right:80px;
   }
+
+  nav {
+    margin:0 -80px;
+    padding-left:80px;
+    padding-right:80px;
+  }
 }
 
 @media ( max-width : 769px) {
   body > header, main > section, body > footer {
+    padding-left:20px;
+    padding-right:20px;
+  }
+
+  nav {
+    margin:0 -20px;
     padding-left:20px;
     padding-right:20px;
   }
@@ -21,12 +33,15 @@
   }
 
   main h2, a.proj-repo-link {
-    .border-radiuses(0, 0, 5px, 0);
     font-size:36px;
     line-height:38px;
     margin-right:-20px;
     padding-left:10px;
     padding-right:30px;
+  }
+
+  main h2 {
+    .border-radiuses(0, 0, 5px, 0);
   }
 }
 
@@ -44,19 +59,13 @@
 
 @media ( max-width : 415px) {
   h1 {
-    font-size: 60px;
-    line-height:75px;
-  }
-
-  main h2 {
-    font-size: 32px;
-  }
-}
-
-@media ( max-width : 415px) {
-  h1 {
     font-size: 52px;
     line-height:65px;
+  }
+
+  main h2, a.proj-repo-link {
+    font-size:32px;
+    line-height:35px;
   }
 
   header > p {
@@ -64,8 +73,9 @@
     line-height:24px;
   }
 
-  main h2, a.proj-repo-link {
-    font-size:32px;
-    line-height:35px;
+  h3 {
+    font-size:28px;
+    line-height:28px;
+    margin-top:15px;
   }
 }

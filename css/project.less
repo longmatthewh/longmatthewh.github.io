@@ -80,6 +80,26 @@ code {
   .border-radius(4px);
 }
 
+nav {
+  margin:0 -120px;
+  padding: 0px 120px;
+  height:36px;
+  line-height:36px;
+
+  a {
+    .border-radiuses(0,5px,5px,0);
+    display:inline-block;
+    padding:0 10px;
+    color:#fff;
+    background:#333;
+    text-decoration:none;
+    &:hover, &:focus {
+      outline: none;
+      background-color: #000;
+    }
+  }
+}
+
 main {
   background-color:rgba(255,255,255,.18);
 
