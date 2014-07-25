@@ -3,26 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a0a57cf-0bc0-467c-9178-7fb110765876" name="Default" comment="">
       <change type="DELETED" beforePath="$PROJECT_DIR$/css/a11yTree.css" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Gruntfile.js" afterPath="$PROJECT_DIR$/Gruntfile.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yButton.min.css.map" afterPath="$PROJECT_DIR$/css/a11yButton.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yButton.min.css" afterPath="$PROJECT_DIR$/css/a11yButton.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yTree.min.css.map" afterPath="$PROJECT_DIR$/css/a11yTree.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/a11yTree.min.css" afterPath="$PROJECT_DIR$/css/a11yTree.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/common.less" afterPath="$PROJECT_DIR$/css/common.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/index.html" afterPath="$PROJECT_DIR$/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a11yButton/index.html" afterPath="$PROJECT_DIR$/a11yButton/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/a11yTree/index.html" afterPath="$PROJECT_DIR$/a11yTree/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/isKey/index.html" afterPath="$PROJECT_DIR$/isKey/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/showMarkup/index.html" afterPath="$PROJECT_DIR$/showMarkup/index.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/isKey.min.css.map" afterPath="$PROJECT_DIR$/css/isKey.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/isKey.min.css" afterPath="$PROJECT_DIR$/css/isKey.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/longmatthewh.less" afterPath="$PROJECT_DIR$/css/longmatthewh.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/longmatthewh.min.css.map" afterPath="$PROJECT_DIR$/css/longmatthewh.min.css.map" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/longmatthewh.min.css" afterPath="$PROJECT_DIR$/css/longmatthewh.min.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/mixins.less" afterPath="$PROJECT_DIR$/css/mixins.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/project.less" afterPath="$PROJECT_DIR$/css/project.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/css/projectResponsive.less" afterPath="$PROJECT_DIR$/css/projectResponsive.less" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="longmatthewh.github.io.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -132,8 +112,8 @@
       <file leaf-file-name="head.html" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/html_fragments/head.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.070202805" vertical-offset="0" max-vertical-offset="641">
-              <caret line="3" column="211" selection-start-line="3" selection-start-column="211" selection-end-line="3" selection-end-column="211" />
+            <state vertical-scroll-proportion="0.3978159" vertical-offset="0" max-vertical-offset="641">
+              <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -286,6 +266,20 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="img" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="longmatthewh.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="longmatthewh.github.io" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="html_fragments" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -350,8 +344,8 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/img" />
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/css" />
       <recent name="$PROJECT_DIR$/isKey" />
       <recent name="$PROJECT_DIR$/js" />
@@ -420,14 +414,14 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="22" width="1440" height="798" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Grunt" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="true" content_ui="tabs" />
@@ -860,8 +854,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/html_fragments/head.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.070202805" vertical-offset="0" max-vertical-offset="641">
-          <caret line="3" column="211" selection-start-line="3" selection-start-column="211" selection-end-line="3" selection-end-column="211" />
+        <state vertical-scroll-proportion="0.3978159" vertical-offset="0" max-vertical-offset="641">
+          <caret line="17" column="9" selection-start-line="17" selection-start-column="9" selection-end-line="17" selection-end-column="9" />
           <folding />
         </state>
       </provider>
